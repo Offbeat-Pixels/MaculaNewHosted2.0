@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - Macula Consultants</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lato:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    /> 
+    <link rel="stylesheet" href="output.css">
+  </head>
+  <body>
+     <nav class="w-full h-20 bg-white/50 shadow-lg">
+  <div class="max-w-full mx-auto px-5 sm:px-10 2xl:px-24 flex items-center justify-between py-3">
+    <!-- Logo -->
+    <img id="logo" class="h-14 w-fit object-cover" src="assets/logo.png" />
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-10 font-[lato] font-semibold items-center"> 
+        <a href="Contact.html" 
+                            class="md:px-8 py-2 md:py-3 w-[80%] md:w-fit bg-[#175884] mx-auto md:ml-10 text-white text-lg font-medium rounded-full shadow-lg font-[lato]">
+                            Schedule a Call
+                        </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden font-extrabold text-3xl">&#9776;</button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden flex-col bg-white md:hidden shadow-lg space-y-2 px-5 py-5">
+    <div><a href="index.html" class="py-2   ">Home</a></div>
+    <div><a href="AboutUs.html" class="py-2   ">About Us</a></div>
+
+    <!-- Mobile Dropdown -->
+    <div class="py-2 ">
+      <button id="mobile-service-btn" class="w-full text-left flex gap-5 justifybetween  ]">
+        Our Service <span id="arrow">&#9660;</span>
+      </button>
+      <div id="mobile-dropdown" class="hidden grid-cols-1 space-y-2 pl-4 mt-2">
+       <div> <a href="BusinessConsulting.html" class="py-1 font-bold  text-[#175985]">Business Consulting</a></div>
+       <div><a href="Saas.html" class="py-1 font-bold  text-[#175985]">Gen AI Enabled Products</a></div>
+
+       <div><a href="GenAI.html" class="py-1 font-bold  text-[#175985]">Gen AI</a></div>
+
+      </div>
+    </div>
+
+    <div><a href="Blogs.html" class="py-2 ">Blog</a></div>
+    <div><a href="Contact.html" class="py-2  ">Contact Us</a></div>
+  </div>
+</nav> 
+   <!-- Hero Section -->
+      <div
+        class=" bg-cover bg-no-repeat border-b  border-gray-300 w-full h-60 flex flex-col items-center p-2 md:p-10 md:pt10 text-black text-center"
+        style="background-image: url(assets/pageBg.png)"
+      >
+        <h1 class="text-6xl font-bold max-md:text-6xl max-sm:text-4xl py-2">
+          Frequently Asked Questions
+        </h1>
+        <nav
+          aria-label="breadcrumb"
+          class="text-xl sm:text-2xl font-[lato] font-bold"
+        >
+          <ol class="flex justify-center">
+            <li><a href="/" class="">Home</a></li>
+            <li class="mx-2">&gt;</li>
+            <li aria-current="page" class="text-[#194F75]">
+              FAQ's
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <main class="p-10"> 
+        <section class="mx-auto my-0 max-w-[995px] max-md:px-5 max-md:py-0">
+          <div class="space-y-5">
+            <!-- FAQ Item 1 -->
+            <article class="flex ">
+              <div class="w-3.5   rounded-md"></div>
+              <div  
+                class="flex-1  rounded-xl shadow-[0_0_3px_rgba(0,0,0,0.25)]"
+              >
+                <button
+                  class="w-full flex justify-between items-center px-5 py-4   rounded-xl "
+                  aria-expanded="false"
+                  aria-controls="answer-1"
+                >
+                  <h2 class="text-2xl font-bold text-black max-sm:text-xl">
+                    What is a business consultant?
+                  </h2>
+                  <svg
+                    width="24"
+                    height="20"
+                    viewBox="0 0 24 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="arrow-icon rotate-180"
+                    style="width: 26px; height: 26px; fill: #194f75"
+                  >
+                    <path
+                      d="M12 0L23.2583 19.5H0.74167L12 0Z"
+                      fill="#194F75"
+                    ></path>
+                  </svg>
+                </button>
+                <div
+                  id="answer-1"
+                  class="font-[lato] px-14 py3 text-2xl leading-10 text-black max-sm:px-5 max-sm:py-4 max-sm:text-lg"
+                >
+                  This is always a good place to start—consulting is a vague
+                  field to the average person. Therefore, many people might not
+                  even realize that they need or could benefit from consulting
+                  services.
+                </div>
+              </div>
+            </article>
+
+            <!-- FAQ Item 2 -->
+            <article class="flex ">
+              <div class="w-3.5   rounded-md"></div>
+              <div  
+                class="flex-1  rounded-xl shadow-[0_0_3px_rgba(0,0,0,0.25)]"
+              >
+                <button
+                  class="w-full flex justify-between items-center px-5 py-4   rounded-xl "
+                  aria-expanded="false"
+                  aria-controls="answer-1"
+                >
+                  <h2 class="text-2xl font-bold text-black max-sm:text-xl">
+                    What is a business consultant?
+                  </h2>
+                  <svg
+                    width="24"
+                    height="20"
+                    viewBox="0 0 24 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="arrow-icon rotate-180"
+                    style="width: 26px; height: 26px; fill: #194f75"
+                  >
+                    <path
+                      d="M12 0L23.2583 19.5H0.74167L12 0Z"
+                      fill="#194F75"
+                    ></path>
+                  </svg>
+                </button>
+                <div
+                  id="answer-1"
+                  class="font-[lato] px-14 py3 text-2xl leading-10 text-black max-sm:px-5 max-sm:py-4 max-sm:text-lg"
+                >
+                  This is always a good place to start—consulting is a vague
+                  field to the average person. Therefore, many people might not
+                  even realize that they need or could benefit from consulting
+                  services.
+                </div>
+              </div>
+            </article>
+ 
+
+            <!-- FAQ Item 3 -->
+          <article class="flex ">
+              <div class="w-3.5   rounded-md"></div>
+              <div  
+                class="flex-1  rounded-xl shadow-[0_0_3px_rgba(0,0,0,0.25)]"
+              >
+                <button
+                  class="w-full flex justify-between items-center px-5 py-4   rounded-xl "
+                  aria-expanded="false"
+                  aria-controls="answer-1"
+                >
+                  <h2 class="text-2xl font-bold text-black max-sm:text-xl">
+                    What is a business consultant?
+                  </h2>
+                  <svg
+                    width="24"
+                    height="20"
+                    viewBox="0 0 24 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="arrow-icon rotate-180"
+                    style="width: 26px; height: 26px; fill: #194f75"
+                  >
+                    <path
+                      d="M12 0L23.2583 19.5H0.74167L12 0Z"
+                      fill="#194F75"
+                    ></path>
+                  </svg>
+                </button>
+                <div
+                  id="answer-1"
+                  class="font-[lato] px-14 py3 text-2xl leading-10 text-black max-sm:px-5 max-sm:py-4 max-sm:text-lg"
+                >
+                  This is always a good place to start—consulting is a vague
+                  field to the average person. Therefore, many people might not
+                  even realize that they need or could benefit from consulting
+                  services.
+                </div>
+              </div>
+            </article>
+ 
+
+            <!-- FAQ Item 4 -->
+            <article class="flex ">
+              <div class="w-3.5   rounded-md"></div>
+              <div  
+                class="flex-1  rounded-xl shadow-[0_0_3px_rgba(0,0,0,0.25)]"
+              >
+                <button
+                  class="w-full flex justify-between items-center px-5 py-4   rounded-xl "
+                  aria-expanded="false"
+                  aria-controls="answer-1"
+                >
+                  <h2 class="text-2xl font-bold text-black max-sm:text-xl">
+                    What is a business consultant?
+                  </h2>
+                  <svg
+                    width="24"
+                    height="20"
+                    viewBox="0 0 24 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="arrow-icon rotate-180"
+                    style="width: 26px; height: 26px; fill: #194f75"
+                  >
+                    <path
+                      d="M12 0L23.2583 19.5H0.74167L12 0Z"
+                      fill="#194F75"
+                    ></path>
+                  </svg>
+                </button>
+                <div
+                  id="answer-1"
+                  class="font-[lato] px-14 py3 text-2xl leading-10 text-black max-sm:px-5 max-sm:py-4 max-sm:text-lg"
+                >
+                  This is always a good place to start—consulting is a vague
+                  field to the average person. Therefore, many people might not
+                  even realize that they need or could benefit from consulting
+                  services.
+                </div>
+              </div>
+            </article> 
+
+            <!-- FAQ Item 5 -->
+      <article class="flex ">
+              <div class="w-3.5   rounded-md"></div>
+              <div  
+                class="flex-1  rounded-xl shadow-[0_0_3px_rgba(0,0,0,0.25)]"
+              >
+                <button
+                  class="w-full flex justify-between items-center px-5 py-4   rounded-xl "
+                  aria-expanded="false"
+                  aria-controls="answer-1"
+                >
+                  <h2 class="text-2xl font-bold text-black max-sm:text-xl">
+                    What is a business consultant?
+                  </h2>
+                  <svg
+                    width="24"
+                    height="20"
+                    viewBox="0 0 24 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="arrow-icon  rotate-180"
+                    style="width: 26px; height: 26px; fill: #194f75"
+                  >
+                    <path
+                      d="M12 0L23.2583 19.5H0.74167L12 0Z"
+                      fill="#194F75"
+                    ></path>
+                  </svg>
+                </button>
+                <div
+                  id="answer-1"
+                  class="font-[lato] px-14 py3 text-2xl leading-10 text-black max-sm:px-5 max-sm:py-4 max-sm:text-lg"
+                >
+                  This is always a good place to start—consulting is a vague
+                  field to the average person. Therefore, many people might not
+                  even realize that they need or could benefit from consulting
+                  services.
+                </div>
+              </div>
+            </article>
+ 
+          </div>
+        </section>
+      </main>
+            <nav
+        class="flex space-x-10 justify-center my-11 border-t-2 py-3 text-2xl font-[lato] font-semibold text-center text-black max-md:mt-10 max-md:max-w-full"
+      >
+        <a href="/" class="hover:text-cyan-800">Home</a>
+        <a href="AboutUs.html" class="hover:text-cyan-800">About Us</a>
+        <a href="BusinessConsulting.html" class="hover:text-cyan-800"
+          >Our Services</a
+        >
+        <a href="BLogs.html" class="hover:text-cyan-800">Blog</a>
+        <a href="#" class="hover:text-cyan-800">Privacy Policy</a>
+        <a href="FAQs.html" class="hover:text-cyan-800">FAQ's</a>
+        <a href="ContactUs.html" class="hover:text-cyan-800">Contact Us</a>
+      </nav>
+<script>
+    function initializeFAQ() {
+  document.querySelectorAll("article button").forEach((button) => {
+    button.setAttribute("aria-expanded", "false");
+    const answer = button.nextElementSibling;
+    if (answer) {
+      answer.style.maxHeight = "0px";
+      answer.style.overflow = "hidden";
+    }
+    button.querySelector(".arrow-icon").style.transform = "rotate(0deg)";
+  });
+}
+function toggleFAQ(button) {
+  const answer = button.nextElementSibling;
+  const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+  // Collapse all other answers before expanding the selected one
+  closeAllFAQs(button);
+
+  // Toggle the clicked FAQ
+  button.setAttribute("aria-expanded", !isExpanded);
+  if (answer) {
+    answer.style.maxHeight = isExpanded ? "0px" : answer.scrollHeight + "px";
+    answer.style.overflow = "hidden";
+    answer.style.transition = "max-height 0.3s ease-in-out";
+  }
+  button.querySelector(".arrow-icon").style.transform = isExpanded ? "rotate(0deg)" : "rotate(180deg)";
+
+  // Get the FAQ container div
+  const faqItem = button;
+const leftBorder = faqItem.previousElementSibling
+  if (!isExpanded) {
+    // Apply styles for active FAQ
+    faqItem.classList.add("bg-sky-50" );
+     leftBorder.classList.add("bg-cyan-600");
+  } else {
+    // Remove styles when collapsing
+    faqItem.classList.remove("bg-sky-50" );
+     leftBorder.classList.add("bg-cyan-600");
+  }
+}
+
+function closeAllFAQs(exceptButton) {
+  document.querySelectorAll('article button[aria-expanded="true"]').forEach((openButton) => {
+    if (openButton !== exceptButton) {
+      openButton.setAttribute("aria-expanded", "false");
+      const openAnswer = openButton.nextElementSibling;
+      if (openAnswer) {
+        openAnswer.style.maxHeight = "0px";
+        openAnswer.style.overflow = "hidden";
+      }
+      openButton.querySelector(".arrow-icon").style.transform = "rotate(0deg)";
+           // Remove active styles from previous FAQ button and border
+      openButton.classList.remove("bg-sky-50");
+      const leftBorder = openButton.parentElement.previousElementSibling;
+      if (leftBorder) {
+        leftBorder.classList.remove("bg-cyan-600");
+      }
+    }
+  });
+}
+ 
+function attachEventListeners() {
+  document.querySelectorAll("article button").forEach((button) => {
+    button.addEventListener("click", () => toggleFAQ(button));
+  });
+}
+function setupFAQ() {
+  initializeFAQ();
+  attachEventListeners();
+}
+
+// Run setup on page load
+document.addEventListener("DOMContentLoaded", setupFAQ);
+
+
+</script>
+ 
+</body>
+</html>

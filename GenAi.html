@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Consulting | Macula</title>
+    <link href="output.css" rel="stylesheet" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+ <nav class="w-full h-20 bg-white/50 shadow-lg">
+  <div class="max-w-full mx-auto px-5 sm:px-10 2xl:px-24 flex items-center justify-between py-3">
+    <!-- Logo -->
+    <img id="logo" class="h-14 w-fit object-cover" src="assets/logo.png" />
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-10 font-[lato] font-semibold items-center"> 
+        <a href="Contact.html" 
+                            class="md:px-8 py-2 md:py-3 w-[80%] md:w-fit bg-[#175884] mx-auto md:ml-10 text-white text-lg font-medium rounded-full shadow-lg font-[lato]">
+                            Schedule a Call
+                        </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden font-extrabold text-3xl">&#9776;</button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden flex-col bg-white md:hidden shadow-lg space-y-2 px-5 py-5">
+    <div><a href="index.html" class="py-2   ">Home</a></div>
+    <div><a href="AboutUs.html" class="py-2   ">About Us</a></div>
+
+    <!-- Mobile Dropdown -->
+    <div class="py-2 ">
+      <button id="mobile-service-btn" class="w-full text-left flex gap-5 justifybetween  ]">
+        Our Service <span id="arrow">&#9660;</span>
+      </button>
+      <div id="mobile-dropdown" class="hidden grid-cols-1 space-y-2 pl-4 mt-2">
+       <div> <a href="BusinessConsulting.html" class="py-1 font-bold  text-[#175985]">Business Consulting</a></div>
+       <div><a href="Saas.html" class="py-1 font-bold  text-[#175985]">Gen AI Enabled Products</a></div>
+
+       <div><a href="GenAI.html" class="py-1 font-bold  text-[#175985]">Gen AI</a></div>
+
+      </div>
+    </div>
+
+    <div><a href="Blogs.html" class="py-2 ">Blog</a></div>
+    <div><a href="Contact.html" class="py-2  ">Contact Us</a></div>
+  </div>
+</nav>
+
+
+    <section class="relative w-full flex flex-col pt10 text-black text-center">
+      <!-- Hero Section -->
+      <div
+        class="absolute bg-cover bg-no-repeat w-full h-60 flex flex-col items-center p-2 md:p-10 md:pt10 text-black text-center"
+        style="background-image: url(assets/pageBg.png)"
+      >
+        <h1 class="text-6xl font-bold max-md:text-6xl max-sm:text-4xl py-2">
+          Services
+        </h1>
+        <nav
+          aria-label="breadcrumb"
+          class="text-xl sm:text-2xl font-[lato] font-bold"
+        >
+          <ol class="flex justify-center">
+            <li><a href="/" class="">Home</a></li>
+            <li class="mx-2">&gt;</li>
+            <li aria-current="page" class="text-[#194F75]">
+              Gen AI Enabled Products
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- Hero Section Content -->
+      <section
+        class="max-w-[50rem] 2xl:max-w-[60rem] z-10 mx-2 mb-10 h-fit   md:mx-auto  border border-gray-200 px-5 py-10  items-center bg-white rounded-2xl mt-32 md:mt-44 space-y-10"
+      >
+        <!-- Left Side (Text) -->
+        <article class="w-full text-left ">
+          <h1 class="text-[#194F75] text-[1.3rem] md:text-4xl px-2 md:px-5 font-bold">
+            Gen AI Enabled Products 
+          </h1>
+          <p class=" mt-5 text-lg md:text-xl px-2 md:px-5 font-[lato]">
+We understand the need of the hour and the increased dependence of businesses on Artificial Intelligence. The team at Macula Consultants has deep understanding of developing products which will enable companies to handle their tasks with ease.
+
+Our Gen AI products are Artificial Intelligence enabled with machine learning which offers a variety of solutions like enhancing your business innovation, boosting productivity and provide customers with a better experience and access to your business.
+          </p>
+      
+
+           
+        </article>
+
+        <!-- Right Side (Video) -->
+        <div class="w-full h-fit  ">
+          <video
+            src="assets/GenAI.mp4"
+            class="w-full h-full rounded-2xl object-cover"
+         
+            controls
+            loop
+          ></video>
+        </div>
+        <article class="space-y-5 text-left"> 
+             <p class="text-lg md:text-xl px-2 md:px-5 font-[lato]">
+     Gen AI enabled products help generate high-quality content and enhance customer interaction through chatbots and virtual assistants. By using Machine Learning and predictive analytics, we assist your business forecast market trends and develop long-term growth strategies.</p> </article>
+          
+            <a href="#"   
+            id="btn"
+             class="
+              md:px-8 py-2 md:py-3 w-[100%] md:w-fit bg-[#175884]     text-white text-lg font-medium rounded-full shadow-lg font-[lato]">
+                           Schedule a Call
+                       </a> 
+      </section>
+     <div  class=" absolute -bottom-5 w-full border-b-2 border-gray-300    "> <img src="assets/strategyBg2.png" alt="" srcset="" class="h-96"></div>
+    </section>
+
+<nav class="flex space-x-10 self-center my-11 justify-center text-2xl font-[lato] font-semibold  text-center text-black max-md:mt-10 max-md:max-w-full"
+  >
+    <a href="#" class="hover:text-cyan-800">Home</a>
+    <a href="#" class=" hover:text-cyan-800">About Us</a>
+    <a href="BusinessConsulting.html" class=" hover:text-cyan-800">Our Services</a>
+    <a href="#" class=" hover:text-cyan-800">Blog</a>
+    <a href="#" class=" hover:text-cyan-800">Privacy Policy</a>
+    <a href="#" class=" hover:text-cyan-800">FAQ's</a>
+    <a href="#" class=" hover:text-cyan-800">Contact Us</a>
+  </nav>
+  </body>
+</html>

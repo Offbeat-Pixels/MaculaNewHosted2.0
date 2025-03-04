@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <script src="../index.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Blog1 | Macula Consultants</title>
+  </head>
+
+  <body >
+    <div id="navbar"></div> 
+
+    <section
+      style="background-image: url(assets/pageBg.png)"
+      class="bg-center bg-cover px-10 py-10 mb-10 h-60"
+    >
+      <div class=" items-center text-center">
+        <h1 class="mb-5 text-6xl font-bold max-md:text-6xl max-sm:text-4xl">
+          Blogs
+        </h1>
+        <nav
+          aria-label="breadcrumb"
+          class="text-2xl font-[lato] font-bold max-sm:text-3xl"
+        >
+          <ol class="flex justify-center">
+            <li><a href="/" class="">Home</a></li>
+            <li class="mx-2">&gt;</li>
+            <li aria-current="page" class="text-[#194F75]">Blogs</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <main
+      class="flex mx-auto my-0 max-w-5xl max-md:flex-col max-sm:p-5"
+    >
+      <article class="p-5 h-fit bg-gray-50 rounded-xl border border-solid border-zinc-200 border-opacity-60"
+      >
+        <img
+          src="assets/InnerBlog1.png"
+          alt="Blog header"
+          class="w-full h-[35rem]  object-cover -mb-18 rounded-2xl"
+        />
+
+        <div
+          class="gap-5 pb-5 mb-5 text-center "
+        >
+          <span
+            class="h-20 w-fit px-10 py-4 mx-auto mb-20 text-2xl font-bold text-black bg-white rounded-lg"
+            >Strategy</span
+          >
+
+          <div
+            class="flex gap-2 items-center text-base font-bold text-slate-600"
+          >
+            <i class="ti ti-calendar" aria-hidden="true"></i>
+            <span>January 22, 2025</span>
+          </div>
+        </div>
+
+        <h2 class="my-5 text-3xl font-bold text-black max-sm:text-3xl">
+          5 Principles to grow your business
+        </h2>
+        <article class="text-lg font-[lato] font-bold leading-9 text-stone-700">
+          <p class="mb-5">
+            We have worked with globally & achieved a huge positive vibes.
+            Provide a comprehensive list of common tax deductions available to
+            small business owners It is a long established fact that a reader
+            will be distracted by the readable content of a page when looking at
+            its layout.
+          </p>
+          <p class="mb-5">
+            If you are going to use a passage of Lorem Ipsum, you need to be
+            sure there isn't anything embarrassing hidden in the middle of text.
+          </p>
+          <p class="mb-5">
+            1. Grow your business with relevant financial management. Our
+            experienced consultants provide information and advice.
+          </p>
+          <p class="mb-5">
+            2. Make the most of this chaotic tax season with our expert tax
+            preparation and distribution services. We do all the necessary
+            paperwork.
+          </p>
+          <p class="mb-5">
+            3. Take the hassle out of financial management with our accounting
+            services.
+          </p>
+          <p class="mb-5">
+            4. Manage your payroll efficiently with advanced processing
+            services. From real wages.
+          </p>
+        </article>
+      </article>
+
+    
+    </main>
+
+    <nav class="flex gap-5 justify-center mx-0 my-10" aria-label="Pagination">
+      <button
+        class="flex items-center justify-center text-2xl font-bold rounded-full cursor-pointer h-[51px] w-[51px] bg-cyan-800 text-white"
+        aria-current="page"
+      >
+        1
+      </button>
+      <button
+        class="flex items-center justify-center text-2xl font-bold rounded-full cursor-pointer h-[51px] w-[51px]"
+      >
+        2
+      </button>
+      <button class="flex items-center" aria-label="Next page">
+        <svg
+          width="26"
+          height="16"
+          viewBox="0 0 26 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M25.7071 8.70711C26.0976 8.31658 26.0976 7.68342 25.7071 7.29289L19.3431 0.928932C18.9526 0.538408 18.3195 0.538408 17.9289 0.928932C17.5384 1.31946 17.5384 1.95262 17.9289 2.34315L23.5858 8L17.9289 13.6569C17.5384 14.0474 17.5384 14.6805 17.9289 15.0711C18.3195 15.4616 18.9526 15.4616 19.3431 15.0711L25.7071 8.70711ZM0 9L25 9V7L0 7L0 9Z"
+            fill="black"
+          />
+        </svg>
+      </button>
+    </nav>
+
+    <section class="p-10 mx-auto my-0 max-w-[1200px]">
+      <h2 class="mb-5 text-3xl font-bold">Leave a comment</h2>
+      <form class="flex flex-col gap-5">
+        <textarea
+          placeholder="Write a comment"
+          class="p-3 w-full text-base rounded border border-solid resize-none border-zinc-200 h-[156px]"
+        ></textarea>
+        <div class="flex gap-5 max-sm:flex-col">
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="flex-1 p-3 text-base rounded border border-solid border-zinc-200"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            class="flex-1 p-3 text-base rounded border border-solid border-zinc-200"
+          />
+        </div>
+        <div class="flex gap-2.5 items-center">
+          <input
+            type="checkbox"
+            id="save-info"
+            class="rounded-sm border border-solid border-neutral-500 h-[13px] w-[13px]"
+          />
+          <label for="save-info"
+            >Save my name, email, and website in this browser for the next time
+            I comment.</label
+          >
+        </div>
+
+        <button
+          class="px-10 py-4 w-fit bg-[#175884] ml-10 text-white text-lg font-medium rounded-full shadow-lg font-[lato]"
+        >
+          Post a comment
+        </button>
+      </form>
+    </section>
+<nav class="flex space-x-10 border-t-2 py-3 self-center my-11 justify-center text-2xl font-[lato] font-semibold  text-center text-black max-md:mt-10 max-md:max-w-full"
+  >
+    <a href="/" class="hover:text-cyan-800">Home</a>
+    <a href="AboutUs.html" class=" hover:text-cyan-800">About Us</a>
+    <a href="BusinessConsulting.html" class=" hover:text-cyan-800">Our Services</a>
+    <a href="BLogs.html" class=" hover:text-cyan-800">Blog</a>
+    <a href="#" class=" hover:text-cyan-800">Privacy Policy</a>
+    <a href="FAQs.html" class=" hover:text-cyan-800">FAQ's</a>
+    <a href="ContactUs.html" class=" hover:text-cyan-800">Contact Us</a>
+  </nav>
+    <div id="footer"></div>
+    <!-- Footer loads here -->
+  </body>
+</html>
