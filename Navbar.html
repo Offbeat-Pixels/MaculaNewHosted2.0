@@ -1,0 +1,59 @@
+<nav class="w-full bg-white/50 shadow-lg border-b-2 border-solid border-neutral-200 ">
+  <div class="max-w-full mx-auto px-5 sm:px-10 2xl:px-24 flex items-center justify-between py-3">
+    <!-- Logo -->
+    <img id="logo" class="h-14 w-fit object-cover" src="assets/logo.png" />
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-10 font-semibold items-center">
+      <a href="index.html" class="hover:text-[#175985]">Home</a>
+      <a href="AboutUs.html" class="hover:text-[#175985]">About Us</a>
+
+      <!-- Services Dropdown -->
+      <div class="relative group">
+        <button class="cursor-pointer hover:text-[#175985]">Our Service</button>
+        <div class="absolute left-0 top-full hidden group-hover:flex flex-col bg-white shadow-lg z-10 w-48 text-sm rounded-lg overflow-hidden">
+          <a href="BusinessConsulting.html" class="px-5 py-2 hover:bg-[#175985] hover:text-white">Business Consulting</a>
+          <a href="Saas.html" class="px-5 py-2 hover:bg-[#175985] hover:text-white">Sales as a Service</a>
+          <a href="GenAi.html" class="px-5 py-2 hover:bg-[#175985] hover:text-white">Gen AI</a>
+        </div>
+      </div>
+
+      <a href="Blogs.html" class="hover:text-[#175985]">Blog</a>
+      <a href="ContactUs.html" class="hover:text-[#175985]">Contact Us</a>
+      
+          <a
+            href="ContactUs.html"
+            class="md:px-8 py-2 md:py-3 w-[80%] md:w-fit bg-[#175884] mx-auto md:ml-10 text-white text-lg font-medium rounded-full shadow-lg font-[lato]"
+          >
+            Schedule a Call
+          </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden font-extrabold text-3xl">&#9776;</button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden flex-col bg-white md:hidden shadow-lg space-y-2 px-5 py-5">
+    <div><a href="index.html" class="py-2   ">Home</a></div>
+    <div><a href="AboutUs.html" class="py-2   ">About Us</a></div>
+
+    <!-- Mobile Dropdown -->
+    <div class="py-2 ">
+      <button id="mobile-service-btn" class="w-full text-left flex gap-5 justifybetween  ]">
+        Our Service <span id="arrow">&#9660;</span>
+      </button>
+      <div id="mobile-dropdown" class="hidden grid-cols-1 space-y-2 pl-4 mt-2">
+       <div> <a href="BusinessConsulting.html" class="py-1 font-bold  text-[#175985]">Business Consulting</a></div>
+       <div><a href="Saas.html" class="py-1 font-bold  text-[#175985]">Sales as a Service</a></div>
+
+       <div><a href="GenAI.html" class="py-1 font-bold  text-[#175985]">Gen AI</a></div>
+
+      </div>
+    </div>
+
+    <div><a href="Blogs.html" class="py-2 ">Blog</a></div>
+    <div><a href="ContactUs.html" class="py-2  ">Contact Us</a></div>
+  </div>
+</nav>
+

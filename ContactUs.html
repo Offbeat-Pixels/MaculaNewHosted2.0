@@ -8,56 +8,20 @@
     <script src="index.js"></script>
   </head>
   <body>
- <nav class="w-full h-20 bg-white/50 shadow-lg">
-  <div class="max-w-full mx-auto px-5 sm:px-10 2xl:px-24 flex items-center justify-between py-3">
-    <!-- Logo -->
-    <img id="logo" class="h-14 w-fit object-cover" src="assets/logo.png" />
+    <div id="navbar"></div>
 
-    <!-- Desktop Menu -->
-    <div class="hidden md:flex gap-10 font-[lato] font-semibold items-center"> 
-        <a href="Contact.html" 
-                            class="md:px-8 py-2 md:py-3 w-[80%] md:w-fit bg-[#175884] mx-auto md:ml-10 text-white text-lg font-medium rounded-full shadow-lg font-[lato]">
-                            Schedule a Call
-                        </a>
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="md:hidden font-extrabold text-3xl">&#9776;</button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden flex-col bg-white md:hidden shadow-lg space-y-2 px-5 py-5">
-    <div><a href="index.html" class="py-2   ">Home</a></div>
-    <div><a href="AboutUs.html" class="py-2   ">About Us</a></div>
-
-    <!-- Mobile Dropdown -->
-    <div class="py-2 ">
-      <button id="mobile-service-btn" class="w-full text-left flex gap-5 justifybetween  ]">
-        Our Service <span id="arrow">&#9660;</span>
-      </button>
-      <div id="mobile-dropdown" class="hidden grid-cols-1 space-y-2 pl-4 mt-2">
-       <div> <a href="BusinessConsulting.html" class="py-1 font-bold  text-[#175985]">Business Consulting</a></div>
-       <div><a href="Saas.html" class="py-1 font-bold  text-[#175985]">Gen AI Enabled Products</a></div>
-
-       <div><a href="GenAI.html" class="py-1 font-bold  text-[#175985]">Gen AI</a></div>
-
-      </div>
-    </div>
-
-    <div><a href="Blogs.html" class="py-2 ">Blog</a></div>
-    <div><a href="Contact.html" class="py-2  ">Contact Us</a></div>
-  </div>
-</nav>
-
-
-    <section class="relative w-full flex flex-col  text-black text-center">
+    <img
+      src="assets/pageBg.png"
+      alt="background-image"
+      class="absolute inset-0 h-60 md:h-96 bg-center bg-cover border-b-2 border-gray-200 -z-10 w-full overflow-hidden"
+    />
+    <section class="relative w-full flex flex-col text-black text-center">
       <!-- Hero Section -->
       <div
-        class="absolute bg-cover bg-no-repeat border-b  border-gray-300 w-full h-60 flex flex-col items-center p-2 md:p-10 md:pt10 text-black text-center"
-        style="background-image: url(assets/pageBg.png)"
+        class="w-full h-fit flex flex-col items-center p-2 md:p-10 text-black text-center"
       >
         <h1 class="text-6xl font-bold max-md:text-6xl max-sm:text-4xl py-2">
-          Services
+          Contact Us
         </h1>
         <nav
           aria-label="breadcrumb"
@@ -66,112 +30,191 @@
           <ol class="flex justify-center">
             <li><a href="/" class="">Home</a></li>
             <li class="mx-2">&gt;</li>
-            <li aria-current="page" class="text-[#194F75]">
-              Gen AI Enabled Products
-            </li>
+            <li aria-current="page" class="text-[#194F75]">Contact Us</li>
           </ol>
         </nav>
       </div>
 
       <!-- Hero Section Content -->
-      <section class="z-10 mx-2  h-fit   md:mx-auto    px5 py5  items-center   rounded-2xl mt-32 md:mt-44 space-y-10"
-      > 
-
-  <main class="z-10  md:mt-28 2xl:mt-36 mx-auto w-full max-w-screen-xl max-md:mt-10 max-md:max-w-full">
-  <div class="flex justify-between gap-5 max-md:flex-col">
-    <!-- Left: Contact Form -->
-    <section class="w-[60%] max-md:w-full">
-      <div class="flex flex-col grow">
-        <form
-          class="z-10 text-left flex flex-col px-12 py-8 max-w-full rounded-xl border border-solid border-neutral-200 w-3xl  max-md:px-5"
+      <section class="z-10 mx-2 h-fit md:mx-auto items-center space-y-10">
+        <main
+          class="z-10 md:mt-10 mx-auto w-full max-w-screen-xl bg-white rounded-2xl max-md:max-w-full"
         >
-          <h2 class="text-6xl font-bold tracking-tighter leading-none text-gray-900 max-md:text-4xl">
-            Let's get in touch
-          </h2>
-          <p class="mt-8 text-base font-medium tracking-wide leading-7 text-slate-600">
-            Let us know who you are and what you're looking for, and we'll get back to you within 24 hours.
-          </p>
+          <div class="flex justify-between gap-5 max-md:flex-col">
+            <!-- Left: Contact Form -->
+            <section class="w-[60%] max-md:w-full">
+              <div class="flex flex-col grow">
+                <form
+                  class="z-10 text-left flex flex-col px-12 py-8 max-w-full rounded-xl border border-solid border-neutral-200 w-3xl max-md:px-5"
+                >
+                  <h2
+                    class="text-6xl font-bold tracking-tighter leading-none text-gray-900 max-md:text-4xl"
+                  >
+                    Let's get in touch
+                  </h2>
+                  <p
+                    class="mt-8 text-base font-medium tracking-wide leading-7 text-slate-600"
+                  >
+                    Let us know who you are and what you're looking for, and
+                    we'll get back to you within 24 hours.
+                  </p>
 
-          <div class="mt-8 max-md:max-w-full">
-            <div class="flex gap-10 max-md:flex-col">
-              <div class="w-1/2 flex flex-col max-md:w-full">
-                <label class="text-base text-slate-600">Your Name <span class="text-xs text-red-700">*</span></label>
-                <input type="text" placeholder="Your name here" required class="px-3.5 py-4 mt-3 w-full border border-zinc-200"/>
+                  <div class="mt-8 max-md:max-w-full">
+                    <div class="flex gap-10 max-md:flex-col">
+                      <div class="w-1/2 flex flex-col max-md:w-full">
+                        <label class="text-base text-slate-600"
+                          >Your Name
+                          <span class="text-xs text-red-700">*</span></label
+                        >
+                        <input
+                          type="text"
+                          placeholder="Your name here"
+                          required
+                          class="px-3.5 py-4 mt-3 w-full border border-zinc-200"
+                        />
 
-                <label class="mt-6 text-base text-slate-600">Your Subject <span class="text-xs text-red-700">*</span></label>
-                <input type="text" placeholder="Your subject here" required class="px-3.5 py-4 mt-3 w-full border border-zinc-200"/>
+                        <label class="mt-6 text-base text-slate-600"
+                          >Your Subject
+                          <span class="text-xs text-red-700">*</span></label
+                        >
+                        <input
+                          type="text"
+                          placeholder="Your subject here"
+                          required
+                          class="px-3.5 py-4 mt-3 w-full border border-zinc-200"
+                        />
+                      </div>
+
+                      <div class="w-1/2 flex flex-col max-md:w-full">
+                        <label class="text-base text-slate-600"
+                          >Your Email
+                          <span class="text-xs text-red-700">*</span></label
+                        >
+                        <input
+                          type="email"
+                          placeholder="Your email here"
+                          required
+                          class="px-3.5 py-4 mt-3 w-full border border-zinc-200"
+                        />
+
+                        <label class="mt-6 text-base text-slate-600"
+                          >Contact Number</label
+                        >
+                        <input
+                          type="tel"
+                          placeholder="Your phone number here"
+                          class="px-3.5 py-4 mt-3 w-full border border-zinc-200"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <label class="mt-6 text-base text-slate-600"
+                    >Message <span class="text-xs text-red-700">*</span></label
+                  >
+                  <textarea
+                    placeholder="Tell us a few words"
+                    required
+                    class="px-4 pt-4 pb-18 mt-2 w-full border border-zinc-200"
+                  ></textarea>
+
+                  <button
+                    type="submit"
+                    class="mt-7 w-fit px-10 py-3 text-2xl font-bold text-white bg-cyan-800 rounded-full hover:bg-cyan-900"
+                  >
+                    Submit Now!
+                  </button>
+                </form>
               </div>
+            </section>
 
-              <div class="w-1/2 flex flex-col max-md:w-full">
-                <label class="text-base text-slate-600">Your Email <span class="text-xs text-red-700">*</span></label>
-                <input type="email" placeholder="Your email here" required class="px-3.5 py-4 mt-3 w-full border border-zinc-200"/>
+            <!-- Right: Info Box -->
+            <aside class="w-[40%] max-md:w-full">
+              <div
+                class="w-full text-base font-medium text-center bg-sky-50 text-slate-600 border border-gray-300 border-opacity-10 p-8 rounded-xl"
+              >
+                <div class="flex flex-col items-center">
+                  <span
+                    class="p-4 w-20 h-20 text-4xl text-cyan-800 bg-white rounded-full"
+                    >📧</span
+                  >
+                  <h3
+                    class="mt-4 text-xl md:text-2xl font-extrabold text-gray-900"
+                  >
+                    Email Address
+                  </h3>
+                  <a
+                    href="mailto:info@example.com"
+                    class="mt-3 hover:text-cyan-800"
+                    >info@example.com</a
+                  >
+                  <a
+                    href="mailto:info@domain.com"
+                    class="mt-1 hover:text-cyan-800"
+                    >info@domain.com</a
+                  >
+                </div>
 
-                <label class="mt-6 text-base text-slate-600">Contact Number</label>
-                <input type="tel" placeholder="Your phone number here" class="px-3.5 py-4 mt-3 w-full border border-zinc-200"/>
+                <hr class="my-6 w-full border-gray-200" />
+
+                <div class="flex flex-col items-center">
+                  <span
+                    class="p-4 w-20 h-20 text-4xl text-cyan-800 bg-white rounded-full"
+                    >📞</span
+                  >
+                  <h3
+                    class="mt-4 text-xl md:text-2xl font-extrabold text-gray-900"
+                  >
+                    Phone Number
+                  </h3>
+                  <a href="tel:+44123456789" class="mt-3 hover:text-cyan-800"
+                    >(+44) 123 456 789</a
+                  >
+                  <a href="tel:+44152567987" class="mt-1 hover:text-cyan-800"
+                    >(+44) 152-567-987</a
+                  >
+                </div>
+
+                <hr class="my-6 w-full border-gray-200" />
+
+                <div class="flex flex-col items-center">
+                  <span
+                    class="p-4 w-20 h-20 text-4xl text-cyan-800 bg-white rounded-full"
+                    >📍</span
+                  >
+                  <h3
+                    class="mt-4 text-xl md:text-2xl font-extrabold text-gray-900"
+                  >
+                    Office Location
+                  </h3>
+                  <p class="mt-3">
+                    66 Guild Street 512B, <br />
+                    Great North Town.
+                  </p>
+                </div>
               </div>
-            </div>
+            </aside>
           </div>
+        </main>
 
-          <label class="mt-6 text-base text-slate-600">Message <span class="text-xs text-red-700">*</span></label>
-          <textarea placeholder="Tell us a few words" required class="px-4 pt-4 pb-18 mt-2 w-full border border-zinc-200"></textarea>
-
-          <button type="submit" class="mt-7 w-fit px-10 py-3 text-2xl font-bold text-white bg-cyan-800 rounded-full hover:bg-cyan-900">
-            Submit Now!
-          </button>
-        </form>
-      </div>
-    </section>
-
-    <!-- Right: Info Box -->
-    <aside class="w-[40%] max-md:w-full">
-      <div class="w-full text-base font-medium text-center bg-sky-50 text-slate-600 border border-gray-300 border-opacity-10 p-8 rounded-xl">
-        <div class="flex flex-col items-center">
-          <span class="p-4 w-20 h-20 text-4xl text-cyan-800 bg-white rounded-full">📧</span>
-          <h3 class="mt-4 text-2xl font-extrabold text-gray-900">Email Address</h3>
-          <a href="mailto:info@example.com" class="mt-3 hover:text-cyan-800">info@example.com</a>
-          <a href="mailto:info@domain.com" class="mt-1 hover:text-cyan-800">info@domain.com</a>
+        <div class="overflow-x-clip bg-zinc-500 max-md:max-w-full">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215.15587916016835!2d78.08792456827523!3d30.36533556093786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d7ad2cdf430d%3A0x682280cc770a07ea!2sOFFBEAT%20PIXELS!5e0!3m2!1sen!2sin!4v1741075332296!5m2!1sen!2sin"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="object-contain w-full aspect-[4] max-md:max-w-full"
+          ></iframe>
         </div>
-
-        <hr class="my-6 w-full border-gray-200">
-
-        <div class="flex flex-col items-center">
-          <span class="p-4 w-20 h-20 text-4xl text-cyan-800 bg-white rounded-full">📞</span>
-          <h3 class="mt-4 text-2xl font-extrabold text-gray-900">Phone Number</h3>
-          <a href="tel:+44123456789" class="mt-3 hover:text-cyan-800">(+44) 123 456 789</a>
-          <a href="tel:+44152567987" class="mt-1 hover:text-cyan-800">(+44) 152-567-987</a>
-        </div>
-
-        <hr class="my-6 w-full border-gray-200">
-
-        <div class="flex flex-col items-center">
-          <span class="p-4 w-20 h-20 text-4xl text-cyan-800 bg-white rounded-full">📍</span>
-          <h3 class="mt-4 text-2xl font-extrabold text-gray-900">Office Location</h3>
-          <p class="mt-3">66 Guild Street 512B, <br> Great North Town.</p>
-        </div>
-      </div>
-    </aside>
-  </div>
-</main>
-
-
-  <div class="overflow-hidden w-full bg-zinc-500 max-md:max-w-full">
-    
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215.15587916016835!2d78.08792456827523!3d30.36533556093786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d7ad2cdf430d%3A0x682280cc770a07ea!2sOFFBEAT%20PIXELS!5e0!3m2!1sen!2sin!4v1741075332296!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="object-contain w-full aspect-[4] max-md:max-w-full"></iframe>
-  </div>
-
       </section>
-     <div  class=" absolute bottom-5 w-full border-b-2 border-gray-300   "> <img src="assets/strategyBg2.png" alt="" srcset="" class="h-80"></div>
+      <div class="absolute bottom-5 w-full border-b-2 border-gray-300">
+        <img src="assets/strategyBg2.png" alt="" srcset="" class="h-80" />
+      </div>
     </section>
 
-<nav class="flex space-x-10 self-center my-11 justify-center text-2xl font-[lato] font-semibold  text-center text-black max-md:mt-10 max-md:max-w-full"
-  >
-    <a href="#" class="hover:text-cyan-800">Home</a>
-    <a href="#" class=" hover:text-cyan-800">About Us</a>
-    <a href="BusinessConsulting.html" class=" hover:text-cyan-800">Our Services</a>
-    <a href="#" class=" hover:text-cyan-800">Blog</a>
-    <a href="#" class=" hover:text-cyan-800">Privacy Policy</a>
-    <a href="#" class=" hover:text-cyan-800">FAQ's</a>
-    <a href="#" class=" hover:text-cyan-800">Contact Us</a>
-  </nav>
+    <div id="footer"></div>
   </body>
 </html>

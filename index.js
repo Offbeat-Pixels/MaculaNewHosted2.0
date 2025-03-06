@@ -20,37 +20,232 @@ document.addEventListener("DOMContentLoaded", () => {
   animatedElements.forEach((el) => observer.observe(el));
 });
 
+// const slider = document.getElementById("slider");
+// const prevBtn = document.getElementById("prevBtn");
+// const nextBtn = document.getElementById("nextBtn");
 
-const slider = document.getElementById("slider");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
+// let index = 0;
+// const totalSlides = 3
 
-let index = 0;
-const totalSlides = document.querySelectorAll("#slider > div").length;
+// // Function to move slides
+// function updateSlider() {
+//   slider.style.transform = `translateX(-${index * 100}%)`;
+// }
 
-// Function to move slides
-function updateSlider() {
-  slider.style.transform = `translateX(-${index * 100}%)`;
+// // Next Slide
+// nextBtn.addEventListener("click", () => {
+//   if (index < totalSlides - 1) {
+//     index++;
+//   } else {
+//     index = 0; // Loop back to the first slide
+//   }
+//   updateSlider();
+// });
+
+// // Previous Slide
+// prevBtn.addEventListener("click", () => {
+//   if (index > 0) {
+//     index--;
+//   } else {
+//     index = totalSlides - 1; // Loop to the last slide
+//   }
+//   updateSlider();
+// });
+
+function loadComponent(id, file, callback) {
+  console.log(`Loading ${file} into #${id}...`);
+
+  fetch(file)
+    .then((response) => {
+      if (!response.ok) throw new Error(`Failed to load ${file}`);
+      return response.text();
+    })
+    .then((data) => {
+      console.log(`Fetched ${file} successfully.`);
+      if (typeof DOMPurify !== "undefined") {
+        data = DOMPurify.sanitize(data);
+      } else {
+        console.warn("DOMPurify is missing, skipping sanitization.");
+      }
+
+      const element = document.getElementById(id);
+      if (!element) {
+        console.error(`Element #${id} not found on this page.`);
+        return;
+      }
+
+      element.innerHTML = data;
+      if (callback) callback();
+    })
+    .catch((error) => console.error(`Error loading ${file}:`, error));
 }
 
-// Next Slide
-nextBtn.addEventListener("click", () => {
-  if (index < totalSlides - 1) {
-    index++;
-  } else {
-    index = 0; // Loop back to the first slide
+
+// Define Navbar function
+function Navbar() {
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileServiceBtn = document.getElementById("mobile-service-btn");
+  const mobileDropdown = document.getElementById("mobile-dropdown");
+  const arrow = document.getElementById("arrow");
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
   }
-  updateSlider();
+
+  if (mobileServiceBtn && mobileDropdown && arrow) {
+    mobileServiceBtn.addEventListener("click", () => {
+      mobileDropdown.classList.toggle("hidden");
+      arrow.innerHTML = mobileDropdown.classList.contains("hidden")
+        ? "&#9660;" // Down Arrow
+        : "&#9650;"; // Up Arrow
+    });
+  }
+}
+
+// Load Navbar first and initialize it
+loadComponent("navbar", "Navbar.html", () => {
+  Navbar();  
 });
 
-// Previous Slide
-prevBtn.addEventListener("click", () => {
-  if (index > 0) {
-    index--;
-  } else {
-    index = totalSlides - 1; // Loop to the last slide
+// Function to dynamically load config.js
+function loadConfig(callback) {
+  if (window.ENV) {
+    if (callback) callback();
+    return;
   }
-  updateSlider();
+
+  const script = document.createElement("script");
+  script.src = "config.js";
+  script.onload = () => {
+    if (window.ENV?.API_URL) {
+      if (callback) callback();
+    } else {
+      console.error("API_URL is not defined. Check config.js!");
+    }
+  };
+  script.onerror = () => {
+    console.error("Failed to load config.js. Check the file path.");
+  };
+
+  document.head.appendChild(script);
+}
+
+// Ensure config loads first, then execute the form submission logic
+loadConfig(() => {
+  loadComponent("footer", "Footer.html", () => {
+    const form = document.getElementById("contactForm");
+    if (!form) {
+      console.error("Form not found after footer load!");
+      return;
+    }
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const submitButton = form.querySelector("button[type='submit']");
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting...";
+
+      const formData = new FormData(form);
+      const data = new URLSearchParams();
+      formData.forEach((value, key) => data.append(key, value));
+
+      if (!window.ENV?.API_URL) {
+        console.error("API_URL is not defined. Ensure config.js is loaded.");
+        alert("Configuration error: API URL is missing.");
+        submitButton.disabled = false;
+        submitButton.textContent = "Submit";
+        return;
+      }
+
+      const webAppUrl = window.ENV.API_URL;
+
+      try {
+        const response = await fetch(webAppUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: data.toString(),
+        });
+
+        const text = await response.text();
+
+        if (response.ok && text.includes("success")) {
+          alert("Your message has been successfully submitted!");
+          form.reset();
+        } else {
+          alert("Error submitting the form. Check logs.");
+        }
+      } catch (error) {
+        console.error("Fetch Error:", error);
+        alert(
+          "There was an error submitting your message. Please check the console."
+        );
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "Submit";
+      }
+    });
+  });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
 
+  function validateInput(input, regex, errorMessage) {
+    const errorElement = input.nextElementSibling;
+    if (!regex.test(input.value.trim())) {
+      errorElement.textContent = errorMessage;
+      errorElement.classList.remove("hidden");
+      return false;
+    } else {
+      errorElement.classList.add("hidden");
+      return true;
+    }
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let isValid = true;
+
+    // Name validation: Only letters, min 2 characters
+    const nameValid = validateInput(
+      document.getElementById("name"),
+      /^[a-zA-Z\s]{2,}$/,
+      "Enter a valid name (only letters, at least 2 characters)."
+    );
+
+    // Email validation
+    const emailValid = validateInput(
+      document.getElementById("email"),
+      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+      "Enter a valid email address."
+    );
+
+    // Phone number validation: 10-15 digits
+    const phoneValid = validateInput(
+      document.getElementById("phone"),
+      /^[0-9]{10,15}$/,
+      "Enter a valid phone number (10-15 digits)."
+    );
+
+    // Message validation: Min 10 characters
+    const messageValid = validateInput(
+      document.getElementById("message"),
+      /^.{10,}$/,
+      "Message must be at least 10 characters long."
+    );
+
+    // Check if all fields are valid
+    isValid = nameValid && emailValid && phoneValid && messageValid;
+
+    if (isValid) {
+      console.log("Form is valid. Submitting...");
+      form.submit(); // Only submit if all validations pass
+    } else {
+      console.log("Form has errors. Fix them before submitting.");
+    }
+  });
+});

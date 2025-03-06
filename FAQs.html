@@ -15,52 +15,14 @@
     <link rel="stylesheet" href="output.css">
   </head>
   <body>
-     <nav class="w-full h-20 bg-white/50 shadow-lg">
-  <div class="max-w-full mx-auto px-5 sm:px-10 2xl:px-24 flex items-center justify-between py-3">
-    <!-- Logo -->
-    <img id="logo" class="h-14 w-fit object-cover" src="assets/logo.png" />
-
-    <!-- Desktop Menu -->
-    <div class="hidden md:flex gap-10 font-[lato] font-semibold items-center"> 
-        <a href="Contact.html" 
-                            class="md:px-8 py-2 md:py-3 w-[80%] md:w-fit bg-[#175884] mx-auto md:ml-10 text-white text-lg font-medium rounded-full shadow-lg font-[lato]">
-                            Schedule a Call
-                        </a>
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="md:hidden font-extrabold text-3xl">&#9776;</button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden flex-col bg-white md:hidden shadow-lg space-y-2 px-5 py-5">
-    <div><a href="index.html" class="py-2   ">Home</a></div>
-    <div><a href="AboutUs.html" class="py-2   ">About Us</a></div>
-
-    <!-- Mobile Dropdown -->
-    <div class="py-2 ">
-      <button id="mobile-service-btn" class="w-full text-left flex gap-5 justifybetween  ]">
-        Our Service <span id="arrow">&#9660;</span>
-      </button>
-      <div id="mobile-dropdown" class="hidden grid-cols-1 space-y-2 pl-4 mt-2">
-       <div> <a href="BusinessConsulting.html" class="py-1 font-bold  text-[#175985]">Business Consulting</a></div>
-       <div><a href="Saas.html" class="py-1 font-bold  text-[#175985]">Gen AI Enabled Products</a></div>
-
-       <div><a href="GenAI.html" class="py-1 font-bold  text-[#175985]">Gen AI</a></div>
-
-      </div>
-    </div>
-
-    <div><a href="Blogs.html" class="py-2 ">Blog</a></div>
-    <div><a href="Contact.html" class="py-2  ">Contact Us</a></div>
-  </div>
-</nav> 
+ <div id="navbar"></div>
+ <img src="assets/pageBg.png" alt="background-image" class="absolute inset-0  h-60 bg-center bg-cover border-b-2 border-gray-200 -z-10 w-full overflow-hidden">
    <!-- Hero Section -->
-      <div
-        class=" bg-cover bg-no-repeat border-b  border-gray-300 w-full h-60 flex flex-col items-center p-2 md:p-10 md:pt10 text-black text-center"
-        style="background-image: url(assets/pageBg.png)"
+
+         <div
+        class="w-full h-fit flex flex-col items-center p-2 md:p-10   text-black text-center" 
       >
-        <h1 class="text-6xl font-bold max-md:text-6xl max-sm:text-4xl py-2">
+        <h1 class="text-6xl font-bold max-md:text-6xl max-sm:text-4xl py-5 md:py-2">
           Frequently Asked Questions
         </h1>
         <nav
@@ -76,8 +38,8 @@
           </ol>
         </nav>
       </div>
-      <main class="p-10"> 
-        <section class="mx-auto my-0 max-w-[995px] max-md:px-5 max-md:py-0">
+      <main class=" p-2 mt-5 md:mt-0 md:p-10"> 
+        <section class="md:mx-auto my-0 max-w-[995px]    ">
           <div class="space-y-5">
             <!-- FAQ Item 1 -->
             <article class="flex ">
@@ -88,9 +50,9 @@
                 <button
                   class="w-full flex justify-between items-center px-5 py-4   rounded-xl "
                   aria-expanded="false"
-                  aria-controls="answer-1"
+                  
                 >
-                  <h2 class="text-2xl font-bold text-black max-sm:text-xl">
+                  <h2 class="max-sm:text-base  text-2xl font-bold text-black ">
                     What is a business consultant?
                   </h2>
                   <svg
@@ -109,8 +71,8 @@
                   </svg>
                 </button>
                 <div
-                  id="answer-1"
-                  class="font-[lato] px-14 py3 text-2xl leading-10 text-black max-sm:px-5 max-sm:py-4 max-sm:text-lg"
+                  
+                  class="font-[lato] px-14   text-2xl leading-10 text-black max-sm:px-5  max-sm:text-lg"
                 >
                   This is always a good place to start—consulting is a vague
                   field to the average person. Therefore, many people might not
@@ -129,9 +91,9 @@
                 <button
                   class="w-full flex justify-between items-center px-5 py-4   rounded-xl "
                   aria-expanded="false"
-                  aria-controls="answer-1"
+                  
                 >
-                  <h2 class="text-2xl font-bold text-black max-sm:text-xl">
+                  <h2 class="max-sm:text-base  text-2xl font-bold text-black ">
                     What is a business consultant?
                   </h2>
                   <svg
@@ -150,8 +112,8 @@
                   </svg>
                 </button>
                 <div
-                  id="answer-1"
-                  class="font-[lato] px-14 py3 text-2xl leading-10 text-black max-sm:px-5 max-sm:py-4 max-sm:text-lg"
+                  
+                  class="font-[lato] px-14  text-2xl leading-10 text-black max-sm:px-5  max-sm:text-lg"
                 >
                   This is always a good place to start—consulting is a vague
                   field to the average person. Therefore, many people might not
@@ -171,9 +133,9 @@
                 <button
                   class="w-full flex justify-between items-center px-5 py-4   rounded-xl "
                   aria-expanded="false"
-                  aria-controls="answer-1"
+                  
                 >
-                  <h2 class="text-2xl font-bold text-black max-sm:text-xl">
+                  <h2 class="max-sm:text-base  text-2xl font-bold text-black ">
                     What is a business consultant?
                   </h2>
                   <svg
@@ -192,8 +154,8 @@
                   </svg>
                 </button>
                 <div
-                  id="answer-1"
-                  class="font-[lato] px-14 py3 text-2xl leading-10 text-black max-sm:px-5 max-sm:py-4 max-sm:text-lg"
+                  
+                  class="font-[lato] px-14  text-2xl leading-10 text-black max-sm:px-5  max-sm:text-lg"
                 >
                   This is always a good place to start—consulting is a vague
                   field to the average person. Therefore, many people might not
@@ -213,9 +175,9 @@
                 <button
                   class="w-full flex justify-between items-center px-5 py-4   rounded-xl "
                   aria-expanded="false"
-                  aria-controls="answer-1"
+                  
                 >
-                  <h2 class="text-2xl font-bold text-black max-sm:text-xl">
+                  <h2 class="max-sm:text-base  text-2xl font-bold text-black ">
                     What is a business consultant?
                   </h2>
                   <svg
@@ -234,8 +196,8 @@
                   </svg>
                 </button>
                 <div
-                  id="answer-1"
-                  class="font-[lato] px-14 py3 text-2xl leading-10 text-black max-sm:px-5 max-sm:py-4 max-sm:text-lg"
+                  
+                  class="font-[lato] px-14  text-2xl leading-10 text-black max-sm:px-5  max-sm:text-lg"
                 >
                   This is always a good place to start—consulting is a vague
                   field to the average person. Therefore, many people might not
@@ -254,9 +216,9 @@
                 <button
                   class="w-full flex justify-between items-center px-5 py-4   rounded-xl "
                   aria-expanded="false"
-                  aria-controls="answer-1"
+                  
                 >
-                  <h2 class="text-2xl font-bold text-black max-sm:text-xl">
+                  <h2 class="max-sm:text-base  text-2xl font-bold text-black ">
                     What is a business consultant?
                   </h2>
                   <svg
@@ -275,8 +237,8 @@
                   </svg>
                 </button>
                 <div
-                  id="answer-1"
-                  class="font-[lato] px-14 py3 text-2xl leading-10 text-black max-sm:px-5 max-sm:py-4 max-sm:text-lg"
+                  
+                  class="font-[lato] px-14  text-2xl leading-10 text-black max-sm:px-5  max-sm:text-lg"
                 >
                   This is always a good place to start—consulting is a vague
                   field to the average person. Therefore, many people might not
@@ -289,19 +251,8 @@
           </div>
         </section>
       </main>
-            <nav
-        class="flex space-x-10 justify-center my-11 border-t-2 py-3 text-2xl font-[lato] font-semibold text-center text-black max-md:mt-10 max-md:max-w-full"
-      >
-        <a href="/" class="hover:text-cyan-800">Home</a>
-        <a href="AboutUs.html" class="hover:text-cyan-800">About Us</a>
-        <a href="BusinessConsulting.html" class="hover:text-cyan-800"
-          >Our Services</a
-        >
-        <a href="BLogs.html" class="hover:text-cyan-800">Blog</a>
-        <a href="#" class="hover:text-cyan-800">Privacy Policy</a>
-        <a href="FAQs.html" class="hover:text-cyan-800">FAQ's</a>
-        <a href="ContactUs.html" class="hover:text-cyan-800">Contact Us</a>
-      </nav>
+    <div id="footer"></div>
+    <script src="index.js"></script>
 <script>
     function initializeFAQ() {
   document.querySelectorAll("article button").forEach((button) => {
@@ -318,10 +269,8 @@ function toggleFAQ(button) {
   const answer = button.nextElementSibling;
   const isExpanded = button.getAttribute("aria-expanded") === "true";
 
-  // Collapse all other answers before expanding the selected one
   closeAllFAQs(button);
 
-  // Toggle the clicked FAQ
   button.setAttribute("aria-expanded", !isExpanded);
   if (answer) {
     answer.style.maxHeight = isExpanded ? "0px" : answer.scrollHeight + "px";
@@ -330,17 +279,14 @@ function toggleFAQ(button) {
   }
   button.querySelector(".arrow-icon").style.transform = isExpanded ? "rotate(0deg)" : "rotate(180deg)";
 
-  // Get the FAQ container div
-  const faqItem = button;
-const leftBorder = faqItem.previousElementSibling
+  // Fix left border issue
+  const leftBorder = button.previousElementSibling;
   if (!isExpanded) {
-    // Apply styles for active FAQ
-    faqItem.classList.add("bg-sky-50" );
-     leftBorder.classList.add("bg-cyan-600");
+    button.classList.add("bg-sky-50");
+    leftBorder.classList.add("bg-cyan-600");
   } else {
-    // Remove styles when collapsing
-    faqItem.classList.remove("bg-sky-50" );
-     leftBorder.classList.add("bg-cyan-600");
+    button.classList.remove("bg-sky-50");
+    leftBorder.classList.remove("bg-cyan-600");  // Fix: Remove border highlight
   }
 }
 

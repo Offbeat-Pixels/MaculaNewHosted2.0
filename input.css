@@ -108,11 +108,16 @@ html {
             }
         }
 
-        .animate-fade-in {
-            animation: fadeInUp 0.8s ease-out forwards;
-            opacity: 0;
-        }
+ 
+ .section {
+  background-image: url('assets/pageBg.png'); /* Default for large screens */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-
-
-        
+@media (max-width: 768px) { /* Change for smaller screens */
+  .section {
+    background-image: url('assets/smallPageBg.png'); /* Smaller image */
+  }
+}
