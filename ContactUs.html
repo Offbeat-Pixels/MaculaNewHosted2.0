@@ -60,9 +60,9 @@
                   </p>
 
                   <div class="mt-8 max-md:max-w-full">
-                    <div class="flex gap-10 max-md:flex-col">
-                      <div class="w-1/2 flex flex-col max-md:w-full">
-                        <label class="text-base text-slate-600"
+                    <div class="grid gap-5  md:grid-cols-2 ">
+                     
+                       <div> <label class="text-base text-slate-600"
                           >Your Name
                           <span class="text-xs text-red-700">*</span></label
                         >
@@ -71,9 +71,9 @@
                           placeholder="Your name here"
                           required
                           class="px-3.5 py-4 mt-3 w-full border border-zinc-200"
-                        />
+                        /></div>
 
-                        <label class="mt-6 text-base text-slate-600"
+                       <div> <label class="mt-6 text-base text-slate-600"
                           >Your Subject
                           <span class="text-xs text-red-700">*</span></label
                         >
@@ -83,10 +83,10 @@
                           required
                           class="px-3.5 py-4 mt-3 w-full border border-zinc-200"
                         />
-                      </div>
-
-                      <div class="w-1/2 flex flex-col max-md:w-full">
-                        <label class="text-base text-slate-600"
+                        </div>
+                      
+ 
+                       <div> <label class="text-base text-slate-600"
                           >Your Email
                           <span class="text-xs text-red-700">*</span></label
                         >
@@ -96,8 +96,9 @@
                           required
                           class="px-3.5 py-4 mt-3 w-full border border-zinc-200"
                         />
+                        </div>
 
-                        <label class="mt-6 text-base text-slate-600"
+                        <div><label class="mt-6 text-base text-slate-600"
                           >Contact Number</label
                         >
                         <input
@@ -105,7 +106,8 @@
                           placeholder="Your phone number here"
                           class="px-3.5 py-4 mt-3 w-full border border-zinc-200"
                         />
-                      </div>
+                        </div>
+                       
                     </div>
                   </div>
 
@@ -120,7 +122,7 @@
 
                   <button
                     type="submit"
-                    class="mt-7 w-fit px-10 py-3 text-2xl font-bold text-white bg-cyan-800 rounded-full hover:bg-cyan-900"
+              class="mt-8 px-6 md:px-8 py-2 md:py-3 w-[100%] md:w-fit bg-[#175884] text-white text-lg font-medium rounded-full shadow-lg font-[lato]"
                   >
                     Submit Now!
                   </button>
@@ -135,8 +137,11 @@
               >
                 <div class="flex flex-col items-center">
                   <span
-                    class="p-4 w-20 h-20 text-4xl text-cyan-800 bg-white rounded-full"
-                    >📧</span
+                    class="p-4 flex justify-center w-20 h-20 text-4xl text-cyan-800 bg-white rounded-full"
+                    ><svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.3414 16.875C13.6383 16.875 13.0914 16.3281 13.0914 15.625V14.375C13.0914 13.75 13.6383 13.125 14.3414 13.125H26.8414C27.4664 13.125 28.0914 13.75 28.0914 14.375V15.625C28.0914 16.3281 27.4664 16.875 26.8414 16.875H14.3414ZM13.0914 23.125V21.875C13.0914 21.25 13.6383 20.625 14.3414 20.625H26.8414C27.4664 20.625 28.0914 21.25 28.0914 21.875V23.125C28.0914 23.8281 27.4664 24.375 26.8414 24.375H14.3414C13.6383 24.375 13.0914 23.8281 13.0914 23.125ZM20.5914 32.6562C21.8414 32.6562 23.0914 32.2656 24.1852 31.4062L40.5914 19.6094V36.25C40.5914 38.3594 38.8727 40 36.8414 40H4.34141C2.23203 40 0.591406 38.3594 0.591406 36.25V19.6094L16.9195 31.4062C18.0133 32.2656 19.2633 32.6562 20.5914 32.6562ZM39.107 12.7344C40.0445 13.5156 40.5914 14.5312 40.5914 15.7031V16.5625L33.0914 21.9531V7.5H8.09141V21.9531L0.591406 16.5625V15.7031C0.591406 14.5312 1.13828 13.4375 1.99766 12.7344C2.70078 12.2656 3.32578 11.7188 4.34141 11.0156V7.5C4.34141 5.46875 5.98203 3.75 8.09141 3.75H14.107C14.3414 3.59375 14.5758 3.4375 14.8102 3.28125C16.1383 2.34375 18.7164 0 20.5914 0C22.3883 0 24.9664 2.34375 26.2945 3.28125C26.5289 3.4375 26.7633 3.59375 26.9977 3.75H33.0914C35.1227 3.75 36.8414 5.46875 36.8414 7.5V11.0156C37.7789 11.7188 38.4039 12.2656 39.107 12.7344Z" fill="#194F75"/>
+</svg>
+</span
                   >
                   <h3
                     class="mt-4 text-xl md:text-2xl font-extrabold text-gray-900"
@@ -159,8 +164,13 @@
 
                 <div class="flex flex-col items-center">
                   <span
-                    class="p-4 w-20 h-20 text-4xl text-cyan-800 bg-white rounded-full"
-                    >📞</span
+                    class="p-4 flex justify-center   w-20 h-20 text-4xl text-cyan-800 bg-white rounded-full"
+                    ><svg width="34" height="41" viewBox="0 0 34 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.1695 40.5593C0.0132809 30.4812 0.0132809 13.9968 10.1695 3.9187C10.6383 3.44995 11.2633 3.37183 11.8102 3.68433L16.8883 6.88745C17.2789 7.12183 17.5133 7.51245 17.5133 7.9812C17.5133 8.13745 17.5133 8.37183 17.4352 8.52808L14.857 14.8562C14.7008 15.325 14.232 15.6375 13.607 15.6375H13.5289L9.15391 15.2468C7.51328 19.7781 7.51328 24.7781 9.15391 29.2312L13.5289 28.8406H13.607C14.232 28.8406 14.7008 29.1531 14.857 29.6218L17.4352 35.95C17.5133 36.1062 17.5133 36.3406 17.5133 36.4968C17.5133 36.9656 17.2789 37.3562 16.8883 37.5906L11.8102 40.7937C11.5758 40.95 11.3414 40.95 11.107 40.95C10.7164 40.95 10.4039 40.8718 10.1695 40.5593ZM21.8883 8.44995C22.7477 10.0125 22.7477 11.9656 21.8883 13.5281C21.5758 14.075 20.8727 14.1531 20.4039 13.7625L19.9352 13.2937C19.6227 12.9812 19.5445 12.5125 19.7789 12.1218C19.9352 11.8093 20.0133 11.4187 20.0133 11.0281C20.0133 10.5593 19.9352 10.1687 19.7789 9.8562C19.5445 9.46558 19.6227 8.99683 19.9352 8.68433L20.4039 8.21558C20.8727 7.82495 21.5758 7.90308 21.8883 8.44995ZM28.9977 1.34058C33.7633 6.88745 33.7633 15.0906 28.9977 20.6375C28.6852 21.1062 28.0602 21.1062 27.6695 20.7156L27.2008 20.325C26.8883 19.9343 26.8102 19.3875 27.1227 18.9968C31.0289 14.3875 31.0289 7.59058 27.1227 2.9812C26.8102 2.59058 26.8883 2.0437 27.2008 1.65308L27.6695 1.26245C28.0602 0.871826 28.6852 0.871826 28.9977 1.34058ZM25.4039 4.8562C28.2164 8.44995 28.2945 13.5281 25.4039 17.1218C25.0914 17.5906 24.4664 17.6687 24.0758 17.2781L23.607 16.8093C23.2164 16.4968 23.2164 15.95 23.4508 15.5593C25.5602 12.9031 25.5602 9.07495 23.4508 6.4187C23.2164 6.02808 23.2164 5.4812 23.607 5.1687L24.0758 4.69995C24.4664 4.30933 25.0914 4.38745 25.4039 4.8562Z" fill="#194F75"/>
+</svg>
+
+
+</span
                   >
                   <h3
                     class="mt-4 text-xl md:text-2xl font-extrabold text-gray-900"
@@ -179,8 +189,11 @@
 
                 <div class="flex flex-col items-center">
                   <span
-                    class="p-4 w-20 h-20 text-4xl text-cyan-800 bg-white rounded-full"
-                    >📍</span
+                    class="p-4 flex justify-center w-20 h-20 text-4xl text-cyan-800 bg-white rounded-full"
+                    ><svg width="31" height="42" viewBox="0 0 31 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.0594 40.1187C2.65313 23.7124 0.621876 21.9937 0.621876 15.8999C0.621876 7.61865 7.2625 0.899902 15.6219 0.899902C23.9031 0.899902 30.6219 7.61865 30.6219 15.8999C30.6219 21.9937 28.5125 23.7124 17.1063 40.1187C16.4031 41.2124 14.7625 41.2124 14.0594 40.1187ZM15.6219 22.1499C19.0594 22.1499 21.8719 19.4155 21.8719 15.8999C21.8719 12.4624 19.0594 9.6499 15.6219 9.6499C12.1063 9.6499 9.37188 12.4624 9.37188 15.8999C9.37188 19.4155 12.1063 22.1499 15.6219 22.1499Z" fill="#194F75"/>
+</svg>
+</span
                   >
                   <h3
                     class="mt-4 text-xl md:text-2xl font-extrabold text-gray-900"

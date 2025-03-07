@@ -20,37 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   animatedElements.forEach((el) => observer.observe(el));
 });
 
-// const slider = document.getElementById("slider");
-// const prevBtn = document.getElementById("prevBtn");
-// const nextBtn = document.getElementById("nextBtn");
-
-// let index = 0;
-// const totalSlides = 3
-
-// // Function to move slides
-// function updateSlider() {
-//   slider.style.transform = `translateX(-${index * 100}%)`;
-// }
-
-// // Next Slide
-// nextBtn.addEventListener("click", () => {
-//   if (index < totalSlides - 1) {
-//     index++;
-//   } else {
-//     index = 0; // Loop back to the first slide
-//   }
-//   updateSlider();
-// });
-
-// // Previous Slide
-// prevBtn.addEventListener("click", () => {
-//   if (index > 0) {
-//     index--;
-//   } else {
-//     index = totalSlides - 1; // Loop to the last slide
-//   }
-//   updateSlider();
-// });
+ 
 
 function loadComponent(id, file, callback) {
   console.log(`Loading ${file} into #${id}...`);
@@ -246,6 +216,42 @@ document.addEventListener("DOMContentLoaded", function () {
       form.submit(); // Only submit if all validations pass
     } else {
       console.log("Form has errors. Fix them before submitting.");
+    }
+  });
+});
+
+
+// Select all buttons with class "ripple"
+const rippleButtons = document.querySelectorAll("#ripple");
+
+rippleButtons.forEach((button) => {
+  button.addEventListener("mouseover", function (e) {
+    // Create a new span element for each ripple
+    let ripples = document.createElement("span");
+    ripples.classList.add("ripple-effect"); // Add a class for styling
+
+    // Get mouse position relative to button
+    let x = e.clientX - button.getBoundingClientRect().left;
+    let y = e.clientY - button.getBoundingClientRect().top;
+
+    // Set position of ripple
+    ripples.style.left = x + "px";
+    ripples.style.top = y + "px";
+
+    // Append ripple to the button
+    button.appendChild(ripples);
+
+    // Remove ripple after animation completes
+    setTimeout(() => {
+      ripples.remove();
+    }, 1000);
+  });
+
+  // Remove ripple when mouse leaves
+  button.addEventListener("mouseout", function () {
+    const ripple = button.querySelector(".ripple-effect");
+    if (ripple) {
+      ripple.remove();
     }
   });
 });

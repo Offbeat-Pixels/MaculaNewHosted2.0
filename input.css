@@ -5,7 +5,9 @@
 body {
   font-family: 'Libre Baskerville', serif;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 
 @keyframes fadeIn {
   from {
@@ -30,16 +32,35 @@ body {
   transform: translateY(0);
 }
 
-/* Button hover animations */
-button {
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+
+ 
+/* Ripple Effect */
+.btn--ripple {
+  background: linear-gradient(90deg, #175884, #1d5d88);
+  overflow: hidden;
+  position: relative;
 }
 
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.btn--ripple span {
+  position: absolute;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: rippleAnimation 0.8s linear infinite;
+}
+
+@keyframes rippleAnimation {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.8;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
 }
 
 /* Navigation link hover effect */
@@ -55,7 +76,7 @@ button:hover {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #155e75; /* cyan-800 */
+  background-color: #155e75;  
   transition: width 0.3s ease;
 }
 
@@ -64,21 +85,18 @@ button:hover {
 }
 
 /* Card hover effects */
-article > div {
+#card {
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
-article > div:hover {
+#card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
+
 
  
   
@@ -109,15 +127,4 @@ html {
         }
 
  
- .section {
-  background-image: url('assets/pageBg.png'); /* Default for large screens */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
-@media (max-width: 768px) { /* Change for smaller screens */
-  .section {
-    background-image: url('assets/smallPageBg.png'); /* Smaller image */
-  }
-}
