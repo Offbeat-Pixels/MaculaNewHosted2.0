@@ -13,11 +13,11 @@
   </head>
 
   <body>
-    <div id="navbar"></div> 
+    <div id="navbar"></div>
 
     <section
-    class="absolute -z-10 bg-cover bg-no-repeat w-full h-60 flex flex-col items-center p-2 md:p-10 md:pt10 text-black text-center"
-        style="background-image: url(assets/pageBg.png)"
+      class="absolute -z-10 bg-cover bg-no-repeat w-full h-60 flex flex-col items-center p-2 md:p-10 md:pt10 text-black text-center"
+      style="background-image: url(assets/pageBg.png)"
     >
       <div class="w-full items-center text-center">
         <h1 class="mb-2 md:mb-5 text-3xl md:text-4xl lg:text-6xl font-bold">
@@ -28,7 +28,7 @@
           class="text-base md:text-xl lg:text-2xl font-[lato] font-bold"
         >
           <ol class="flex justify-center">
-            <li><a href="/" class="">Home</a></li>
+            <li><a href="index.html" class="">Home</a></li>
             <li class="mx-2">&gt;</li>
             <li aria-current="page" class="text-[#194F75]">Blogs</li>
           </ol>
@@ -37,35 +37,36 @@
     </section>
 
     <main
-        class="max-w-[50rem] 2xl:max-w-[60rem] z-20 mx-2 mb-10 h-fit   md:mx-auto  border border-gray-200     items-center bg-white rounded-2xl mt-32 md:mt-44 space-y-10"
+      class="max-w-[50rem] 2xl:max-w-[60rem] z-20 mx-2 mb-10 h-fit md:mx-auto border border-gray-200 items-center bg-white rounded-2xl mt-32 md:mt-44 space-y-10"
     >
-      <article class="p-3 md:p-5 h-fit  rounded-xl border border-solid border-zinc-200 border-opacity-60"
+      <article
+        class="p-3 md:p-5 h-fit rounded-xl border border-solid border-zinc-200 border-opacity-60"
       >
         <img
           src="assets/InnerBlog1.png"
           alt="Blog header"
-          class=" w-full   h-fit md:h-80 lg:h-[35rem] object-contain md:object-cover rounded-2xl"
+          class="w-full h-fit md:h-80 lg:h-[35rem] object-contain md:object-cover rounded-2xl"
         />
 
         <div
           class="gap-5 w-fit mx-auto pb-3 md:pb-5 mb-3 md:mb-5 -mt-14 md:-mt-28 text-center"
         >
           <label
-            class="  h-auto w-fit px-4 md:px-10 py-2 md:py-4 mx-auto mt-4 mb-6 md:mb-20 text-lg md:text-2xl font-bold text-black bg-white rounded-lg  "
-            >Strategy</label>
-</div>
-          <div
-            class="flex gap-2   text-sm md:text-base font-bold text-slate-600"
+            class="h-auto w-fit px-4 md:px-10 py-2 md:py-4 mx-auto mt-4 mb-6 md:mb-20 text-lg md:text-2xl font-bold text-black bg-white rounded-lg"
+            >Strategy</label
           >
-            <i class="ti ti-calendar" aria-hidden="true"></i>
-            <span>January 22, 2025</span>
-          </div>
-        
+        </div>
+        <div class="flex gap-2 text-sm md:text-base font-bold text-slate-600">
+          <i class="ti ti-calendar" aria-hidden="true"></i>
+          <span>January 22, 2025</span>
+        </div>
 
         <h2 class="my-3 md:my-5 text-2xl md:text-3xl font-bold text-black">
           5 Principles to grow your business
         </h2>
-        <article class="text-base md:text-lg font-[lato] font-bold leading-7 md:leading-9 text-stone-700">
+        <article
+          class="text-base md:text-lg font-[lato] font-bold leading-7 md:leading-9 text-stone-700"
+        >
           <p class="mb-3 md:mb-5">
             We have worked with globally & achieved a huge positive vibes.
             Provide a comprehensive list of common tax deductions available to
@@ -98,7 +99,10 @@
       </article>
     </main>
 
-    <nav class="flex gap-3 md:gap-5 justify-center mx-0 my-6 md:my-10" aria-label="Pagination">
+    <nav
+      class="flex gap-3 md:gap-5 justify-center mx-0 my-6 md:my-10"
+      aria-label="Pagination"
+    >
       <button
         class="flex items-center justify-center text-lg md:text-2xl font-bold rounded-full cursor-pointer h-10 w-10 md:h-[51px] md:w-[51px] bg-cyan-800 text-white"
         aria-current="page"
@@ -128,7 +132,9 @@
     </nav>
 
     <section class="px-4 py-6 md:p-10 mx-auto my-0 max-w-[1200px]">
-      <h2 class="mb-3 md:mb-5 text-2xl md:text-3xl font-bold">Leave a comment</h2>
+      <h2 class="mb-3 md:mb-5 text-2xl md:text-3xl font-bold">
+        Leave a comment
+      </h2>
       <form class="flex flex-col gap-3 md:gap-5">
         <textarea
           placeholder="Write a comment"
@@ -153,8 +159,8 @@
             class="rounded-sm border border-solid border-neutral-500 h-[13px] w-[13px]"
           />
           <label for="save-info">
-            Save my name, email, and website in this browser for the next time
-            I comment.
+            Save my name, email, and website in this browser for the next time I
+            comment.
           </label>
         </div>
 
@@ -165,7 +171,7 @@
         </button>
       </form>
     </section>
- 
-    <div id="footer"></div> 
+
+    <div id="footer"></div>
   </body>
 </html>
