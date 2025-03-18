@@ -6,19 +6,38 @@
     <!-- Desktop Menu -->
     <div class="hidden lg:flex gap-10 font-semibold items-center">
       <a href="index.html" class="hover:text-[#175985]">Home</a>
-      <a href="AboutUs.html" class="hover:text-[#175985]">About Us</a>
+      <!-- <a href="AboutUs.html" class="hover:text-[#175985]">About Us</a> -->
+       <!-- Services Dropdown -->
+<div class="relative group">
+        <button class="cursor-pointer hover:text-[#175985]">About Us</button>
+        <div class="absolute left-0 top-full hidden group-hover:flex flex-col bg-white shadow-lg z-10 w-48 text-sm rounded-lg overflow-hidden">
+          <a href="AboutUs.html" class="px-5 py-2 hover:bg-[#175985] hover:text-white">Company </a>
+          <a href="Careers.html" class="px-5 py-2 hover:bg-[#175985] hover:text-white">Careers</a>
+          
+        </div>
+      </div>
 
       <!-- Services Dropdown -->
       <div class="relative group">
         <button class="cursor-pointer hover:text-[#175985]">Our Service</button>
         <div class="absolute left-0 top-full hidden group-hover:flex flex-col bg-white shadow-lg z-10 w-48 text-sm rounded-lg overflow-hidden">
-          <a href="BusinessConsulting.html" class="px-5 py-2 hover:bg-[#175985] hover:text-white">Business Consulting</a>
           <a href="Saas.html" class="px-5 py-2 hover:bg-[#175985] hover:text-white">Sales as a Service</a>
-          <a href="GenAi.html" class="px-5 py-2 hover:bg-[#175985] hover:text-white">Gen AI</a>
+          <a href="fund-raising.html" class="px-5 py-2 hover:bg-[#175985] hover:text-white">Fund-Raising</a>
+          <a href="Go-to-market-advisory.html" class="px-5 py-2 hover:bg-[#175985] hover:text-white">Go-to-market Advisory</a>
+          <a href="BusinessConsulting.html" class="px-5 py-2 hover:bg-[#175985] hover:text-white">Business Consulting</a>
         </div>
       </div>
 
-      <a href="Blogs.html" class="hover:text-[#175985]">Blog</a>
+      <!-- <a href="Blogs.html" class="hover:text-[#175985]">Blog</a> -->
+       <div class="relative group">
+        <button class="cursor-pointer hover:text-[#175985]">Blog</button>
+        <div class="absolute left-0 top-full hidden group-hover:flex flex-col bg-white shadow-lg z-10 w-48 text-sm rounded-lg overflow-hidden">
+          <a href="Blogs.html" class="px-5 py-2 hover:bg-[#175985] hover:text-white">Blogs </a>
+          <a href="whitepaper.html" class="px-5 py-2 hover:bg-[#175985] hover:text-white">Whitepapers</a>
+          
+        </div>
+      </div>
+
       <a href="ContactUs.html" class="hover:text-[#175985]">Contact Us</a>
       
           <a
@@ -44,10 +63,11 @@
         Our Service <span id="arrow">&#9660;</span>
       </button>
       <div id="mobile-dropdown" class="hidden grid-cols-1 space-y-2 pl-4 mt-2">
+        <div><a href="Saas.html" class="py-1 font-bold  text-[#175985]">Sales as a Service</a></div>
+        <div><a href="fund-raising.html" class="py-1 font-bold  text-[#175985]">Fund-Raising </a></div>
+        <div><a href="Go-to-market-advisory.html" class="py-1 font-bold  text-[#175985]">Go-to-market Advisory  </a></div>
        <div> <a href="BusinessConsulting.html" class="py-1 font-bold  text-[#175985]">Business Consulting</a></div>
-       <div><a href="Saas.html" class="py-1 font-bold  text-[#175985]">Sales as a Service</a></div>
 
-       <div><a href="GenAI.html" class="py-1 font-bold  text-[#175985]">Gen AI</a></div>
 
       </div>
     </div>
