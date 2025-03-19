@@ -4,16 +4,14 @@
   <div
     class="max-w-full mx-auto px-5 sm:px-10 2xl:px-24 flex items-center justify-between py-3"
   >
-    <!-- Logo -->
+    <!-- Logo - Remain same -->
     <a href="index.html">
       <img id="logo" class="h-14 w-fit object-cover" src="assets/logo.png"
     /></a>
 
-    <!-- Desktop Menu -->
+    <!-- Desktop Menu - Remain same -->
     <div class="hidden lg:flex gap-10 font-semibold items-center">
       <a href="index.html" class="hover:text-[#175985]">Home</a>
-      <!-- <a href="AboutUs.html" class="hover:text-[#175985]">About Us</a> -->
-      <!-- Services Dropdown -->
       <div class="relative group">
         <button class="cursor-pointer hover:text-[#175985]">About Us</button>
         <div
@@ -32,7 +30,6 @@
         </div>
       </div>
 
-      <!-- Services Dropdown -->
       <div class="relative group">
         <button class="cursor-pointer hover:text-[#175985]">Our Service</button>
         <div
@@ -61,7 +58,6 @@
         </div>
       </div>
 
-      <!-- <a href="Blogs.html" class="hover:text-[#175985]">Blog</a> -->
       <div class="relative group">
         <button class="cursor-pointer hover:text-[#175985]">Blog</button>
         <div
@@ -90,7 +86,7 @@
       </a>
     </div>
 
-    <!-- Mobile Menu Button -->
+    <!-- Mobile Menu Button - Remain same -->
     <button id="menu-btn" class="lg:hidden font-extrabold text-3xl">
       &#9776;
     </button>
@@ -102,15 +98,32 @@
     class="hidden flex-col bg-white lg:hidden shadow-lg space-y-2 px-5 py-5"
   >
     <div><a href="index.html" class="py-2">Home</a></div>
-    <div><a href="AboutUs.html" class="py-2">About Us</a></div>
+    
+    <!-- About Us Mobile Dropdown -->
+    <div class="py-2">
+      <button 
+        id="mobile-about-btn"
+        class="w-full cursor-pointer text-left flex gap-5  items-center"
+      >
+        About Us <span id="about-arrow">&#9660;</span>
+      </button>
+      <div id="mobile-about-dropdown" class="hidden grid-cols-1 space-y-2 pl-4 mt-2">
+        <div>
+          <a href="AboutUs.html" class="py-1 font-bold text-[#175985]">Company</a>
+        </div>
+        <div>
+          <a href="Careers.html" class="py-1 font-bold text-[#175985]">Careers</a>
+        </div>
+      </div>
+    </div>
 
-    <!-- Mobile Dropdown -->
+    <!-- Services Mobile Dropdown -->
     <div class="py-2">
       <button
         id="mobile-service-btn"
-        class="w-full text-left flex gap-5 justifybetween ]"
+        class="w-full text-left flex gap-5  items-center"
       >
-        Our Service <span id="arrow">&#9660;</span>
+        Our Service <span id="service-arrow">&#9660;</span>
       </button>
       <div id="mobile-dropdown" class="hidden grid-cols-1 space-y-2 pl-4 mt-2">
         <div>
@@ -140,7 +153,24 @@
       </div>
     </div>
 
-    <div><a href="Blogs.html" class="py-2">Blog</a></div>
+    <!-- Blog Mobile Dropdown -->
+    <div class="py-2">
+      <button
+        id="mobile-blog-btn"
+        class="w-full text-left flex gap-5  items-center"
+      >
+        Blog <span id="blog-arrow">&#9660;</span>
+      </button>
+      <div id="mobile-blog-dropdown" class="hidden grid-cols-1 space-y-2 pl-4 mt-2">
+        <div>
+          <a href="Blogs.html" class="py-1 font-bold text-[#175985]">Blogs</a>
+        </div>
+        <div>
+          <a href="whitepaper.html" class="py-1 font-bold text-[#175985]">Whitepapers</a>
+        </div>
+      </div>
+    </div>
+
     <div><a href="ContactUs.html" class="py-2">Contact Us</a></div>
   </div>
 </nav>

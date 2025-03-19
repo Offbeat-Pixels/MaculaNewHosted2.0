@@ -52,27 +52,66 @@ function loadComponent(id, file, callback) {
 
 
 // Define Navbar function
+// Define Navbar function
 function Navbar() {
   const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
+  
+  // Service dropdown elements
   const mobileServiceBtn = document.getElementById("mobile-service-btn");
   const mobileDropdown = document.getElementById("mobile-dropdown");
-  const arrow = document.getElementById("arrow");
+  const serviceArrow = document.getElementById("service-arrow");
+  
+  // About dropdown elements
+  const mobileAboutBtn = document.getElementById("mobile-about-btn");
+  const mobileAboutDropdown = document.getElementById("mobile-about-dropdown");
+  const aboutArrow = document.getElementById("about-arrow");
+  
+  // Blog dropdown elements
+  const mobileBlogBtn = document.getElementById("mobile-blog-btn");
+  const mobileBlogDropdown = document.getElementById("mobile-blog-dropdown");
+  const blogArrow = document.getElementById("blog-arrow");
+
+  // Toggle mobile menu
   if (menuBtn && mobileMenu) {
     menuBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
   }
 
-  if (mobileServiceBtn && mobileDropdown && arrow) {
+  // Toggle service dropdown
+  if (mobileServiceBtn && mobileDropdown && serviceArrow) {
     mobileServiceBtn.addEventListener("click", () => {
       mobileDropdown.classList.toggle("hidden");
-      arrow.innerHTML = mobileDropdown.classList.contains("hidden")
+      serviceArrow.innerHTML = mobileDropdown.classList.contains("hidden")
+        ? "&#9660;" // Down Arrow
+        : "&#9650;"; // Up Arrow
+    });
+  }
+  
+  // Toggle about dropdown
+  if (mobileAboutBtn && mobileAboutDropdown && aboutArrow) {
+    mobileAboutBtn.addEventListener("click", () => {
+      mobileAboutDropdown.classList.toggle("hidden");
+      aboutArrow.innerHTML = mobileAboutDropdown.classList.contains("hidden")
+        ? "&#9660;" // Down Arrow
+        : "&#9650;"; // Up Arrow
+    });
+  }
+  
+  // Toggle blog dropdown
+  if (mobileBlogBtn && mobileBlogDropdown && blogArrow) {
+    mobileBlogBtn.addEventListener("click", () => {
+      mobileBlogDropdown.classList.toggle("hidden");
+      blogArrow.innerHTML = mobileBlogDropdown.classList.contains("hidden")
         ? "&#9660;" // Down Arrow
         : "&#9650;"; // Up Arrow
     });
   }
 }
+
+// Initialize navbar when DOM content is loaded
+document.addEventListener("DOMContentLoaded", Navbar);
 
 // Load Navbar first and initialize it
 loadComponent("navbar", "Navbar.html", () => {
