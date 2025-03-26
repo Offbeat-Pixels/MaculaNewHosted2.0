@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Consulting | Macula</title>
+    <title>Contact | Macula</title>
     <link href="output.css" rel="stylesheet" />
     <script src="index.js"></script>
   </head>
@@ -15,11 +15,11 @@
       alt="background-image"
       class="absolute inset-0 h-60 md:h-96 bg-center bg-cover border-b-2 border-gray-200 -z-10 w-full overflow-hidden"
     />
-    
+
     <section class="relative w-full flex flex-col text-black text-center">
       <!-- Hero Section -->
       <div
-        class="w-full h-fit flex flex-col items-center p-10  text-black text-center"
+        class="w-full h-fit flex flex-col items-center p-10 text-black text-center"
       >
         <h1 class="text-2xl md:text-3xl lg:text-[2.5rem] font-bold py-2">
           Contact Us
@@ -45,91 +45,61 @@
             <!-- Left: Contact Form -->
             <section class="w-[60%] max-md:w-full">
               <div class="flex flex-col grow">
-                <form
-                  class="z-10 text-left flex flex-col px-12 py-8 max-w-full rounded-xl border border-solid border-neutral-200 w-3xl max-md:px-5"
-                >
-                  <h2
-                    class="text-2xl md:text-3xl lg:text-[2.5rem] font-bold py-2 text-gray-900"
-                  >
-                    Let's get in touch
-                  </h2>
-                  <p
-                    class="mt-2 text-base font-medium tracking-wide leading-7 text-slate-600"
-                  >
-                    Let us know who you are and what you're looking for, and
-                    we'll get back to you within 24 hours.
-                  </p>
+             <form id="contactForm" class="z-10 text-left flex flex-col px-12 py-8 max-w-full rounded-xl border border-solid border-neutral-200 w-3xl max-md:px-5">
+        <h2 class="text-2xl md:text-3xl lg:text-[2.5rem] font-bold py-2 text-gray-900">
+            Let's get in touch
+        </h2>
+        <p class="mt-2 text-base font-medium tracking-wide leading-7 text-slate-600">
+            Let us know who you are and what you're looking for, and we'll get back to you within 24 hours.
+        </p>
 
-                  <div class="mt-8 max-md:max-w-full">
-                    <div class="grid gap-5 md:grid-cols-2">
-                      <div>
-                        <label class="text-base text-slate-600"
-                          >Your Name
-                          <span class="text-xs text-red-700">*</span></label
-                        >
-                        <input
-                          type="text"
-                          placeholder="Your name here"
-                          required
-                          class="px-3.5 py-4 mt-3 w-full border border-zinc-200"
-                        />
-                      </div>
+        <div class="mt-8 max-md:max-w-full">
+            <div class="grid gap-5 md:grid-cols-2">
+                <div>
+                    <label class="text-base text-slate-600">
+                        Your Name <span class="text-xs text-red-700">*</span>
+                    </label>
+                    <input type="text" name="name" placeholder="Your name here" required 
+                           class="px-3.5 py-4 mt-3 w-full border border-zinc-200"/>
+                </div>
 
-                      <div>
-                        <label class="mt-6 text-base text-slate-600"
-                          >Your Subject
-                          <span class="text-xs text-red-700">*</span></label
-                        >
-                        <input
-                          type="text"
-                          placeholder="Your subject here"
-                          required
-                          class="px-3.5 py-4 mt-3 w-full border border-zinc-200"
-                        />
-                      </div>
+                <div>
+                    <label class="mt-6 text-base text-slate-600">
+                        Your Subject <span class="text-xs text-red-700">*</span>
+                    </label>
+                    <input type="text" name="subject" placeholder="Your subject here" required 
+                           class="px-3.5 py-4 mt-3 w-full border border-zinc-200"/>
+                </div>
 
-                      <div>
-                        <label class="text-base text-slate-600"
-                          >Your Email
-                          <span class="text-xs text-red-700">*</span></label
-                        >
-                        <input
-                          type="email"
-                          placeholder="Your email here"
-                          required
-                          class="px-3.5 py-4 mt-3 w-full border border-zinc-200"
-                        />
-                      </div>
+                <div>
+                    <label class="text-base text-slate-600">
+                        Your Email <span class="text-xs text-red-700">*</span>
+                    </label>
+                    <input type="email" name="email" placeholder="Your email here" required 
+                           class="px-3.5 py-4 mt-3 w-full border border-zinc-200"/>
+                </div>
 
-                      <div>
-                        <label class="mt-6 text-base text-slate-600"
-                          >Contact Number</label
-                        >
-                        <input
-                          type="tel"
-                          placeholder="Your phone number here"
-                          class="px-3.5 py-4 mt-3 w-full border border-zinc-200"
-                        />
-                      </div>
-                    </div>
-                  </div>
+                <div>
+                    <label class="mt-6 text-base text-slate-600">
+                        Contact Number
+                    </label>
+                    <input type="tel" name="phone" placeholder="Your phone number here" 
+                           class="px-3.5 py-4 mt-3 w-full border border-zinc-200"/>
+                </div>
+            </div>
+        </div>
 
-                  <label class="mt-6 text-base text-slate-600"
-                    >Message <span class="text-xs text-red-700">*</span></label
-                  >
-                  <textarea
-                    placeholder="Tell us a few words"
-                    required
-                    class="px-4 pt-4 pb-18 mt-2 w-full border border-zinc-200"
-                  ></textarea>
+        <label class="mt-6 text-base text-slate-600">
+            Message <span class="text-xs text-red-700">*</span>
+        </label>
+        <textarea name="message" placeholder="Tell us a few words" required 
+                  class="px-4 pt-4 pb-18 mt-2 w-full border border-zinc-200"></textarea>
 
-                  <button
-                    type="submit"
-                    class="mt-8 px-6 md:px-8 py-2 md:py-3 w-[100%] md:w-fit bg-[#175884] text-white text-lg font-medium rounded-full shadow-lg font-[lato]"
-                  >
-                    Submit Now!
-                  </button>
-                </form>
+        <button type="submit" 
+                class="mt-8 px-6 md:px-8 py-2 md:py-3 w-[100%] md:w-fit bg-[#175884] text-white text-lg font-medium rounded-full shadow-lg font-[lato]">
+            Submit Now!
+        </button>
+    </form>
               </div>
             </section>
 
@@ -158,14 +128,9 @@
                     Email Address
                   </h3>
                   <a
-                    href="mailto:info@example.com"
+                    href="mailto:info@maculaconsultants.com"
                     class="mt-3 hover:text-cyan-800"
-                    >info@example.com</a
-                  >
-                  <a
-                    href="mailto:info@domain.com"
-                    class="mt-1 hover:text-cyan-800"
-                    >info@domain.com</a
+                    >info@maculaconsultants.com</a
                   >
                 </div>
 
@@ -190,12 +155,9 @@
                   <h3 class="mt-3 text-xl font-extrabold text-gray-900">
                     Phone Number
                   </h3>
-                  <a href="tel:+44123456789" class="mt-3 hover:text-cyan-800"
-                    >(+44) 123 456 789</a
-                  >
-                  <a href="tel:+44152567987" class="mt-1 hover:text-cyan-800"
-                    >(+44) 152-567-987</a
-                  >
+                  <a href="tel:+9188277 78411" class="mt-3 hover:text-cyan-800"
+                    >(+91) 88277 78411
+                  </a>
                 </div>
 
                 <hr class="my-6 w-full border-gray-200" />
@@ -220,8 +182,8 @@
                     Office Location
                   </h3>
                   <p class="mt-3 w-80">
-                 OFFBEAT PIXELS
-44A, IT Park, Sahastradhara Road,Dehradun, Uttarakhand 248009
+                    OFFBEAT PIXELS 44A, IT Park, Sahastradhara Road,Dehradun,
+                    Uttarakhand 248009
                   </p>
                 </div>
               </div>

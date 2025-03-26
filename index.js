@@ -52,7 +52,6 @@ function loadComponent(id, file, callback) {
 
 
 // Define Navbar function
-// Define Navbar function
 function Navbar() {
   const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
@@ -294,3 +293,69 @@ rippleButtons.forEach((button) => {
     }
   });
 });
+
+
+
+  
+ document.addEventListener("DOMContentLoaded", function () {
+   const form = document.getElementById("contactForm");
+
+   form.addEventListener("submit", async function (event) {
+     event.preventDefault();
+
+     // Get submit button and response message elements
+     const submitButton = document.querySelector('button[type="submit"]');
+     const responseMessage = document.createElement("div");
+     form.appendChild(responseMessage);
+
+     // Reset previous response message
+     responseMessage.textContent = "";
+     responseMessage.className = ""; // Clear previous classes
+
+     // Disable submit button and change text
+     submitButton.textContent = "Submitting...";
+     submitButton.disabled = true;
+
+     // Collect form data
+     const formData = new FormData(form);
+     const data = {
+       name: formData.get("name"),
+       email: formData.get("email"),
+       subject: formData.get("subject"),
+       phone: formData.get("phone"),
+       message: formData.get("message"),
+     };
+
+     try {
+       // Replace with your Google Apps Script Web App URL
+       const response = await fetch(
+         "https://script.google.com/macros/s/AKfycbykVSF2CHHauW2owoJxmgYppm9ooaUMO4eUm5qtGAyKnWHhdVkyeGUcZTsXaD-25fMt/exec",
+         {
+           method: "POST",
+           mode: "no-cors", // Important for Google Sheets submission
+           cache: "no-cache",
+           headers: {
+             "Content-Type": "application/json",
+           },
+           body: JSON.stringify(data),
+         }
+       );
+
+       // Success handling (note: no-cors mode prevents reading response)
+       responseMessage.textContent =
+         "Your message has been successfully submitted!";
+       responseMessage.className = "text-green-600 mt-4";
+       form.reset(); // Reset form fields
+     } catch (error) {
+       // Error handling
+       responseMessage.textContent =
+         "There was an error submitting your message. Please try again.";
+       responseMessage.className = "text-red-600 mt-4";
+       console.error("Error:", error);
+     } finally {
+       // Restore submit button
+       submitButton.textContent = "Submit Now!";
+       submitButton.disabled = false;
+     }
+   });
+ });
