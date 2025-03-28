@@ -116,6 +116,9 @@ document.addEventListener("DOMContentLoaded", Navbar);
 loadComponent("navbar", "Navbar.html", () => {
   Navbar();  
 });
+loadComponent("footer", "Footer.html", () => {
+  Footer();  
+});
 
 // Function to dynamically load config.js
 function loadConfig(callback) {
@@ -295,6 +298,28 @@ rippleButtons.forEach((button) => {
 });
 
 
+// Function to dynamically load config.js
+function loadConfig(callback) {
+  if (window.ENV) { 
+    if (callback) callback();
+    return;
+  }
+
+  const script = document.createElement("script");
+  script.src = "config.js";
+  script.onload = () => {
+    if (window.ENV?.API_URL) { 
+      if (callback) callback();
+    } else {
+      console.error("API_URL is not defined. Check config.js!");
+    }
+  };
+  script.onerror = () => {
+    console.error("Failed to load config.js. Check the file path.");
+  };
+
+  document.head.appendChild(script);
+}
 
   
  document.addEventListener('DOMContentLoaded', function() {
@@ -325,35 +350,33 @@ rippleButtons.forEach((button) => {
                     'phone': formData.get('phone'),
                     'message': formData.get('message')
                 };
-
+const webAppUrl = window.ENV.API_URL;
                 try {
                     // Replace with your Google Apps Script Web App URL
-                    const response = await fetch(
-                      "https://script.google.com/macros/s/AKfycbws3VFcGpgYUSp9fnkCwH2XLyH60YEv6Z9V6NxcfaU4rzk-lHGBGBClSdo_tpnAzSPm/exec",
-                      {
-                        method: "POST",
-                        mode: "no-cors", // Important for Google Sheets submission
-                        cache: "no-cache",
-                        headers: {
-                          "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify(data),
-                      }
-                    );
+                    const response = await fetch(webAppUrl, {
+                      method: "POST",
+                     
+                      cache: "no-cache",
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify(data),
+                    });
 
-                    // Success handling (note: no-cors mode prevents reading response)
-                    responseMessage.textContent = "Your message has been successfully submitted!";
-                    responseMessage.className = "text-green-600 mt-4";
-                    form.reset(); // Reset form fields
+               if (response.ok && text.includes("success")) {
+          alert("Your message has been successfully submitted!");
+          form.reset();
+        } else {
+          alert("Error submitting the form. Check logs.");
+        }
                 } catch (error) {
-                    // Error handling
-                    responseMessage.textContent = "There was an error submitting your message. Please try again.";
-                    responseMessage.className = "text-red-600 mt-4";
+                  alert(
+                    "There was an error submitting your message. Please check the console."
+                  ); 
                     console.error('Error:', error);
                 } finally {
-                    // Restore submit button
-                    submitButton.textContent = "Submit Now!";
-                    submitButton.disabled = false;
+                        submitButton.disabled = false;
+                        submitButton.textContent = "Submit";
                 }
             });
         });
